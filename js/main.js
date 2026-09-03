@@ -123,25 +123,29 @@
             <div class="people-grid">
               ${group.members
                 .map(
-                  (person) => `
-                    <article class="person-card">
-                      <img class="person-photo" src="${escapeHtml(person.image)}" alt="${escapeHtml(localized(person, "name"))}" />
-                      <div>
-                        <h4>${escapeHtml(localized(person, "name"))}</h4>
-                        <p class="role">${escapeHtml(localized(person, "role"))}</p>
-                        <dl class="person-meta">
-                          <div>
-                            <dt>${escapeHtml(t("labels").major)}</dt>
-                            <dd>${escapeHtml(localized(person, "major"))}</dd>
-                          </div>
-                          <div>
-                            <dt>${escapeHtml(t("labels").direction)}</dt>
-                            <dd>${escapeHtml(localized(person, "direction"))}</dd>
-                          </div>
-                        </dl>
-                      </div>
-                    </article>
-                  `
+                  (person) => {
+                    const major = localized(person, "major");
+                    const direction = localized(person, "direction");
+                    const meta = [
+                      major
+                        ? `<div><dt>${escapeHtml(t("labels").major)}</dt><dd>${escapeHtml(major)}</dd></div>`
+                        : "",
+                      direction
+                        ? `<div><dt>${escapeHtml(t("labels").direction)}</dt><dd>${escapeHtml(direction)}</dd></div>`
+                        : ""
+                    ].join("");
+
+                    return `
+                      <article class="person-card">
+                        <img class="person-photo" src="${escapeHtml(person.image)}" alt="${escapeHtml(localized(person, "name"))}" />
+                        <div>
+                          <h4>${escapeHtml(localized(person, "name"))}</h4>
+                          <p class="role">${escapeHtml(localized(person, "role"))}</p>
+                          ${meta ? `<dl class="person-meta">${meta}</dl>` : ""}
+                        </div>
+                      </article>
+                    `;
+                  }
                 )
                 .join("")}
             </div>
