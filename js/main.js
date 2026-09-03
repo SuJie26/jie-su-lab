@@ -126,6 +126,9 @@
                   (person) => {
                     const major = localized(person, "major");
                     const direction = localized(person, "direction");
+                    const portraitStyle = person.portrait
+                      ? ` style="--portrait-scale: ${person.portrait.scale}; --portrait-origin: ${person.portrait.origin};"`
+                      : "";
                     const meta = [
                       major
                         ? `<div><dt>${escapeHtml(t("labels").major)}</dt><dd>${escapeHtml(major)}</dd></div>`
@@ -137,7 +140,9 @@
 
                     return `
                       <article class="person-card">
-                        <img class="person-photo" src="${escapeHtml(person.image)}" alt="${escapeHtml(localized(person, "name"))}" />
+                        <div class="person-photo-frame">
+                          <img class="person-photo" src="${escapeHtml(person.image)}" alt="${escapeHtml(localized(person, "name"))}"${portraitStyle} />
+                        </div>
                         <div>
                           <h4>${escapeHtml(localized(person, "name"))}</h4>
                           <p class="role">${escapeHtml(localized(person, "role"))}</p>
