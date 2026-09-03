@@ -41,7 +41,7 @@ window.siteContent = {
     peopleKicker: "Team",
     peopleTitle: "Team Members",
     peopleIntro:
-      "Current members include doctoral, master, undergraduate, and technical staff. Alumni details can be added when confirmed.",
+      "The team includes doctoral, master, undergraduate, and research support staff.",
     projectsKicker: "Scientific Research",
     projectsTitle: "Research Projects",
     projectsIntro:
@@ -131,7 +131,7 @@ window.siteContent = {
       "课题组围绕社会-生态系统、环境经济学、气候变化适应与环境管理开展研究，并关注红树林保护与修复、可持续水产养殖、海岸带综合管理等应用议题。",
     peopleKicker: "团队",
     peopleTitle: "团队成员",
-    peopleIntro: "团队目前包括博士研究生、硕士研究生、本科生和技术人员。毕业生信息可后续补充。",
+    peopleIntro: "团队目前包括博士研究生、硕士研究生、本科生和科研支持人员。",
     projectsKicker: "科学研究",
     projectsTitle: "科研项目",
     projectsIntro: "当前项目关注海岸带生态修复与可持续发展、红树林生态-社会耦合机制、气候风险预警与生态健康协同增效。",
@@ -302,7 +302,29 @@ window.siteData = {
           majorZh: "环境管理",
           directionEn: "Mangrove Social-Ecological System",
           directionZh: "红树林社会-生态系统",
-          image: "assets/huilin-lai.jpeg"
+          image: "assets/huilin-lai-2026.jpeg"
+        },
+        {
+          nameEn: "Zelong Ma",
+          nameZh: "马泽龙",
+          roleEn: "PhD student, 2026-",
+          roleZh: "2026级博士研究生",
+          majorEn: "Environmental Management",
+          majorZh: "环境管理",
+          directionEn: "Human-Land Coupling System at the Land-Sea Interface",
+          directionZh: "陆海界面的人地耦合系统",
+          image: "assets/zelong-ma-2026.jpeg"
+        },
+        {
+          nameEn: "Shouxiang Sun",
+          nameZh: "孙守祥",
+          roleEn: "PhD student, 2026-",
+          roleZh: "2026级博士研究生",
+          majorEn: "Marine Affairs",
+          majorZh: "海洋事务",
+          directionEn: "Coastal Zone Integrated Management",
+          directionZh: "海岸带综合管理",
+          image: "assets/shouxiang-sun-2026.jpeg"
         }
       ]
     },
@@ -319,7 +341,7 @@ window.siteData = {
           majorZh: "海洋事务",
           directionEn: "Social-Ecological Benefits of Mangrove-Aquaculture Coupling Model",
           directionZh: "红树林—水产养殖耦合模式的社会生态效益",
-          image: "assets/yixin-chen.jpeg"
+          image: "assets/yixin-chen-2026.jpeg"
         },
         {
           nameEn: "Qingcheng Liu",
@@ -330,7 +352,62 @@ window.siteData = {
           majorZh: "环境管理",
           directionEn: "Effectiveness Assessment of Mangrove Conservation and Restoration; Social-Ecological System",
           directionZh: "红树林保护与修复成效评估；社会生态系统",
-          image: "assets/qingcheng-liu.jpeg"
+          image: "assets/qingcheng-liu-2026.jpeg"
+        },
+        {
+          nameEn: "Feibin Huang",
+          nameZh: "黄沸彬",
+          roleEn: "Master student, 2026-",
+          roleZh: "2026级硕士研究生",
+          majorEn: "Marine Affairs",
+          majorZh: "海洋事务",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/feibin-huang-2026.jpeg"
+        },
+        {
+          nameEn: "Tianlei Pu",
+          nameZh: "蒲田雷",
+          roleEn: "Master student, 2026-",
+          roleZh: "2026级硕士研究生",
+          majorEn: "Environmental Management",
+          majorZh: "环境管理",
+          directionEn: "Sentiment Analysis of Cultural Ecosystem Services",
+          directionZh: "文化生态系统服务情感分析",
+          image: "assets/tianlei-pu-2026.jpeg"
+        },
+        {
+          nameEn: "Huiru Qiang",
+          nameZh: "强慧如",
+          roleEn: "Master student, 2026-",
+          roleZh: "2026级硕士研究生",
+          majorEn: "Environmental Management",
+          majorZh: "环境管理",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/huiru-qiang-2026.jpeg"
+        },
+        {
+          nameEn: "Sherlon Juntilo Sulapas",
+          nameZh: "SHERLON JUNTILO SULAPAS",
+          roleEn: "Master student, 2026-",
+          roleZh: "2026级硕士研究生",
+          majorEn: "Marine Affairs",
+          majorZh: "海洋事务",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/sherlon-sulapas-2026.jpeg"
+        },
+        {
+          nameEn: "Yuwei Zhang",
+          nameZh: "张玉玮",
+          roleEn: "Master student, 2026-",
+          roleZh: "2026级硕士研究生",
+          majorEn: "Environmental Management",
+          majorZh: "环境管理",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/yuwei-zhang-2026.jpeg"
         }
       ]
     },
@@ -345,9 +422,20 @@ window.siteData = {
           roleZh: "2024级本科生",
           majorEn: "Environmental Science",
           majorZh: "环境科学",
-          directionEn: "Research direction to be updated",
-          directionZh: "研究方向待更新",
-          image: "assets/mingzhe-li.jpeg"
+          directionEn: "",
+          directionZh: "",
+          image: "assets/mingzhe-li-2026.jpeg"
+        },
+        {
+          nameEn: "Haochen Yang",
+          nameZh: "杨昊宸",
+          roleEn: "Undergraduate student, 2025-",
+          roleZh: "2025级本科生",
+          majorEn: "Ecology",
+          majorZh: "生态学",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/haochen-yang-2026.jpeg"
         }
       ]
     },
@@ -356,15 +444,26 @@ window.siteData = {
       zh: "技术人员",
       members: [
         {
+          nameEn: "Jinhao Li",
+          nameZh: "李锦豪",
+          roleEn: "Research Assistant",
+          roleZh: "研究助理",
+          majorEn: "",
+          majorZh: "",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/jinhao-li-2026.jpeg"
+        },
+        {
           nameEn: "Yuhang Peng",
           nameZh: "彭宇航",
           roleEn: "Research Assistant",
           roleZh: "研究助理",
-          majorEn: "To be updated",
-          majorZh: "待更新",
-          directionEn: "Research support and lab operations",
-          directionZh: "科研支持与实验室运行",
-          image: "assets/yuhang-peng.jpeg"
+          majorEn: "",
+          majorZh: "",
+          directionEn: "",
+          directionZh: "",
+          image: "assets/yuhang-peng-2026.jpeg"
         }
       ]
     }
