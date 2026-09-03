@@ -302,7 +302,8 @@ window.siteData = {
           majorZh: "环境管理",
           directionEn: "Mangrove Social-Ecological System",
           directionZh: "红树林社会-生态系统",
-          image: "assets/huilin-lai-2026.jpeg"
+          image: "assets/huilin-lai-2026.jpeg",
+          portrait: { scale: "2.8", origin: "57% 59%" }
         },
         {
           nameEn: "Zelong Ma",
@@ -341,7 +342,8 @@ window.siteData = {
           majorZh: "海洋事务",
           directionEn: "Social-Ecological Benefits of Mangrove-Aquaculture Coupling Model",
           directionZh: "红树林—水产养殖耦合模式的社会生态效益",
-          image: "assets/yixin-chen-2026.jpeg"
+          image: "assets/yixin-chen-2026.jpeg",
+          portrait: { scale: "2.8", origin: "50% 62%" }
         },
         {
           nameEn: "Qingcheng Liu",
@@ -424,7 +426,8 @@ window.siteData = {
           majorZh: "环境科学",
           directionEn: "",
           directionZh: "",
-          image: "assets/mingzhe-li-2026.jpeg"
+          image: "assets/mingzhe-li-2026.jpeg",
+          portrait: { scale: "1.55", origin: "48% 22%" }
         },
         {
           nameEn: "Haochen Yang",
@@ -435,7 +438,8 @@ window.siteData = {
           majorZh: "生态学",
           directionEn: "",
           directionZh: "",
-          image: "assets/haochen-yang-2026.jpeg"
+          image: "assets/haochen-yang-2026.jpeg",
+          portrait: { scale: "1.8", origin: "52% 42%" }
         }
       ]
     },
@@ -452,7 +456,8 @@ window.siteData = {
           majorZh: "",
           directionEn: "",
           directionZh: "",
-          image: "assets/jinhao-li-2026.jpeg"
+          image: "assets/jinhao-li-2026.jpeg",
+          portrait: { scale: "3", origin: "29% 65%" }
         },
         {
           nameEn: "Yuhang Peng",
@@ -463,7 +468,8 @@ window.siteData = {
           majorZh: "",
           directionEn: "",
           directionZh: "",
-          image: "assets/yuhang-peng-2026.jpeg"
+          image: "assets/yuhang-peng-2026.jpeg",
+          portrait: { scale: "3", origin: "52% 41%" }
         }
       ]
     }
