@@ -100,6 +100,29 @@ select {
   backdrop-filter: blur(18px);
 }
 
+body[data-page]:not([data-page="home"]) .site-header {
+  background: rgba(251, 250, 246, 0.96);
+  border-bottom-color: var(--line);
+  box-shadow: 0 8px 26px rgba(16, 33, 42, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+body[data-page]:not([data-page="home"]) .brand,
+body[data-page]:not([data-page="home"]) .nav-links a,
+body[data-page]:not([data-page="home"]) .lang-button {
+  color: var(--ink-soft);
+}
+
+body[data-page]:not([data-page="home"]) .language-switch {
+  border-color: var(--line);
+  background: var(--surface);
+}
+
+body[data-page]:not([data-page="home"]) .lang-button.active {
+  color: #ffffff;
+  background: var(--teal);
+}
+
 .nav-shell {
   width: min(100% - 2rem, var(--content));
   min-height: var(--header-height);
@@ -170,6 +193,18 @@ select {
 .site-header.scrolled .nav-links a,
 .site-header:focus-within .nav-links a {
   color: var(--ink-soft);
+}
+
+.nav-links a.active,
+.site-header.scrolled .nav-links a.active,
+.site-header:focus-within .nav-links a.active {
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.site-header.scrolled .nav-links a.active,
+.site-header:focus-within .nav-links a.active {
+  background: var(--mist);
 }
 
 .nav-links a:hover,
@@ -264,6 +299,35 @@ select {
   align-items: end;
   overflow: hidden;
   color: #ffffff;
+}
+
+.subpage-main {
+  padding-top: var(--header-height);
+}
+
+.page-hero {
+  padding: 4.5rem 0;
+  color: #ffffff;
+  background: var(--teal-dark);
+}
+
+.page-hero .container {
+  max-width: 900px;
+}
+
+.page-hero .section-kicker {
+  color: #f4c06d;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+}
+
+.page-hero p:last-child {
+  max-width: 760px;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.08rem;
 }
 
 .hero-image,
