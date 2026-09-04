@@ -2,7 +2,7 @@
   const page = document.body.dataset.page || "home";
   const navItems = [
     ["about", "index.html#about", "navAbout"],
-    ["research", "research.html", "navResearch"],
+    ["research", "index.html#research", "navResearch"],
     ["people", "people.html", "navPeople"],
     ["projects", "projects.html", "navProjects"],
     ["publications", "publications.html", "navPublications"],
@@ -41,7 +41,7 @@
       <div class="container footer-grid">
         <div><strong>SESuS Lab</strong><p data-i18n="footerCopy">Social-Ecological System Sustainability Lab, Xiamen University.</p></div>
         <div class="footer-links" aria-label="Footer navigation">
-          <a href="research.html" data-i18n="navResearch">Research</a>
+          <a href="index.html#research" data-i18n="navResearch">Research</a>
           <a href="people.html" data-i18n="navPeople">People</a>
           <a href="publications.html" data-i18n="navPublications">Publications</a>
           <a href="contact.html" data-i18n="navContact">Contact</a>
