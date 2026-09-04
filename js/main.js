@@ -52,17 +52,20 @@
     document.querySelectorAll("[data-i18n]").forEach((node) => {
       node.textContent = t(node.dataset.i18n);
     });
-    document.querySelector("[data-publication-search]").placeholder = t("publicationSearchPlaceholder");
+    const searchInput = document.querySelector("[data-publication-search]");
+    if (searchInput) searchInput.placeholder = t("publicationSearchPlaceholder");
     langButtons.forEach((button) => button.classList.toggle("active", button.dataset.langButton === currentLang));
   }
 
   function renderPiBio() {
     const target = document.querySelector("[data-pi-bio]");
+    if (!target) return;
     target.innerHTML = data.piBio[currentLang].map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
   }
 
   function renderCv() {
     const target = document.querySelector("[data-cv]");
+    if (!target) return;
     target.innerHTML = data.cv
       .map(
         (item) => `
@@ -77,6 +80,7 @@
 
   function renderAwards() {
     const target = document.querySelector("[data-awards]");
+    if (!target) return;
     target.innerHTML = data.awards
       .map(
         (item) => `
@@ -91,6 +95,7 @@
 
   function renderThemes() {
     const target = document.querySelector("[data-research-themes]");
+    if (!target) return;
     target.innerHTML = data.researchThemes
       .map((entry) => {
         const theme = entry[currentLang];
@@ -115,6 +120,7 @@
 
   function renderPeople() {
     const target = document.querySelector("[data-people]");
+    if (!target) return;
     target.innerHTML = data.peopleGroups
       .map(
         (group) => `
@@ -162,6 +168,7 @@
 
   function renderProjectFilters() {
     const target = document.querySelector("[data-project-filters]");
+    if (!target) return;
     target.innerHTML = Object.entries(t("projectFilters"))
       .map(
         ([key, label]) => `
@@ -182,6 +189,7 @@
 
   function renderProjects() {
     const target = document.querySelector("[data-projects]");
+    if (!target) return;
     const projects = projectFilter === "all" ? data.projects : data.projects.filter((project) => project.category === projectFilter);
     target.innerHTML = projects
       .map(
@@ -211,6 +219,7 @@
 
   function setupPublicationYearSelect() {
     const select = document.querySelector("[data-publication-year]");
+    if (!select) return;
     const selectedValue = select.value || "all";
     const years = Array.from(new Set(data.publications.map((publication) => publication.year))).sort((a, b) => b - a);
     select.innerHTML = `<option value="all">${escapeHtml(t("allYears"))}</option>${years
@@ -221,8 +230,11 @@
 
   function renderPublications() {
     const target = document.querySelector("[data-publications]");
-    const searchValue = document.querySelector("[data-publication-search]").value.trim().toLowerCase();
-    const selectedYear = document.querySelector("[data-publication-year]").value;
+    const searchInput = document.querySelector("[data-publication-search]");
+    const yearSelect = document.querySelector("[data-publication-year]");
+    if (!target || !searchInput || !yearSelect) return;
+    const searchValue = searchInput.value.trim().toLowerCase();
+    const selectedYear = yearSelect.value;
     const filtered = data.publications.filter((publication) => {
       const matchesType = publicationType === "all" || publication.type === publicationType;
       const matchesYear = selectedYear === "all" || String(publication.year) === selectedYear;
@@ -265,8 +277,11 @@
   }
 
   function setupPublicationFilters() {
-    document.querySelector("[data-publication-search]").addEventListener("input", renderPublications);
-    document.querySelector("[data-publication-year]").addEventListener("change", renderPublications);
+    const searchInput = document.querySelector("[data-publication-search]");
+    const yearSelect = document.querySelector("[data-publication-year]");
+    if (!searchInput || !yearSelect) return;
+    searchInput.addEventListener("input", renderPublications);
+    yearSelect.addEventListener("change", renderPublications);
     document.querySelectorAll("[data-publication-type]").forEach((button) => {
       button.addEventListener("click", () => {
         publicationType = button.dataset.publicationType;
@@ -279,6 +294,7 @@
 
   function renderNews() {
     const target = document.querySelector("[data-news]");
+    if (!target) return;
     target.innerHTML = data.news
       .map(
         (item) => `
@@ -300,6 +316,7 @@
 
   function renderOpportunities() {
     const target = document.querySelector("[data-opportunities]");
+    if (!target) return;
     target.innerHTML = data.opportunities
       .map(
         (item) => `
