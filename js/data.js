@@ -76,8 +76,9 @@ window.siteContent = {
       all: "All",
       restoration: "Restoration",
       mangrove: "Mangroves",
-      climate: "Climate risk",
-      bluecarbon: "Blue carbon"
+      aquaculture: "Mangroves and aquaculture",
+      bluecarbon: "Blue carbon",
+      ecotourism: "Mangrove ecotourism"
     },
     labels: {
       period: "Period",
@@ -85,9 +86,12 @@ window.siteContent = {
       funder: "Funder",
       major: "Major",
       direction: "Research Direction",
+      biography: "Profile",
       alumni: "Alumni",
       applyByEmail: "Contact by email",
-      materials: "Suggested materials"
+      materials: "Suggested materials",
+      viewProfile: "View profile",
+      viewProject: "View project details"
     }
   },
   zh: {
@@ -164,8 +168,9 @@ window.siteContent = {
       all: "全部",
       restoration: "生态修复",
       mangrove: "红树林",
-      climate: "气候风险",
-      bluecarbon: "蓝碳"
+      aquaculture: "红树林与水产养殖",
+      bluecarbon: "蓝碳",
+      ecotourism: "红树林生态旅游"
     },
     labels: {
       period: "时间",
@@ -173,9 +178,12 @@ window.siteContent = {
       funder: "项目来源",
       major: "专业",
       direction: "研究方向",
+      biography: "个人简介",
       alumni: "毕业生",
       applyByEmail: "邮件联系",
-      materials: "建议材料"
+      materials: "建议材料",
+      viewProfile: "查看简介",
+      viewProject: "查看项目简介"
     }
   }
 };

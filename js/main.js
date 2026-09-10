@@ -132,6 +132,7 @@
                   (person) => {
                     const major = localized(person, "major");
                     const direction = localized(person, "direction");
+                    const bio = localized(person, "bio");
                     const portraitStyle = person.portrait
                       ? ` style="--portrait-scale: ${person.portrait.scale}; --portrait-origin: ${person.portrait.origin};"`
                       : "";
@@ -153,6 +154,7 @@
                           <h4>${escapeHtml(localized(person, "name"))}</h4>
                           <p class="role">${escapeHtml(localized(person, "role"))}</p>
                           ${meta ? `<dl class="person-meta">${meta}</dl>` : ""}
+                          ${bio ? `<details class="person-details"><summary>${escapeHtml(t("labels").viewProfile)}</summary><p>${escapeHtml(bio)}</p></details>` : ""}
                         </div>
                       </article>
                     `;
@@ -211,6 +213,7 @@
                 <dd>${escapeHtml(localized(project, "funder"))}</dd>
               </div>
             </dl>
+            ${localized(project, "summary") ? `<details class="project-details"><summary>${escapeHtml(t("labels").viewProject)}</summary><p>${escapeHtml(localized(project, "summary"))}</p></details>` : ""}
           </article>
         `
       )
@@ -264,7 +267,7 @@
                 .map(
                   (publication) => `
                     <article class="publication-item ${publication.highlight ? "highlight" : ""}">
-                      <p>${escapeHtml(publication.text)}</p>
+                      <p>${publication.url ? `<a href="${escapeHtml(publication.url)}" target="_blank" rel="noreferrer">${escapeHtml(publication.text)}</a>` : escapeHtml(publication.text)}</p>
                     </article>
                   `
                 )
@@ -298,10 +301,8 @@
     target.innerHTML = data.news
       .map(
         (item) => `
-          <article class="news-card wide">
-            <div class="news-photos">
-              ${item.images.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(localized(item, "title"))}" />`).join("")}
-            </div>
+          <article class="news-card wide ${item.images.length ? "" : "no-images"}">
+            ${item.images.length ? `<div class="news-photos">${item.images.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(localized(item, "title"))}" />`).join("")}</div>` : ""}
             <div>
               <p class="card-tag">${escapeHtml(localized(item, "category"))}</p>
               <time>${escapeHtml(localized(item, "date"))}</time>
