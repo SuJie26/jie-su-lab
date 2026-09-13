@@ -91,7 +91,8 @@ window.siteContent = {
       applyByEmail: "Contact by email",
       materials: "Suggested materials",
       viewProfile: "View profile",
-      viewProject: "View project details"
+      viewProject: "View project details",
+      viewNews: "View news details"
     }
   },
   zh: {
@@ -183,7 +184,8 @@ window.siteContent = {
       applyByEmail: "邮件联系",
       materials: "建议材料",
       viewProfile: "查看简介",
-      viewProject: "查看项目简介"
+      viewProject: "查看项目简介",
+      viewNews: "查看动态详情"
     }
   }
 };

@@ -18,20 +18,20 @@
 
   data.researchThemes = [
     {
-      en: { title: "Social-Ecological System Sustainability", tag: "Coupled systems", summary: "We examine interactions between society and ecosystems in coastal and marine settings, with particular attention to mangroves, coastal communities, and governance.", details: ["Coastal social-ecological systems", "Coastal ecosystems", "Ecosystem services and human well-being"] },
-      zh: { title: "可持续社会-生态系统", tag: "人地耦合", summary: "研究海洋与海岸带社会系统和生态系统之间的相互作用，重点关注红树林、沿海社区与治理机制。", details: ["海岸带社会-生态系统", "滨海生态系统", "生态系统服务与人类福祉"] }
+      en: { title: "Social-Ecological System Sustainability", tag: "Coupled systems", summary: "We examine interactions between society and ecosystems in coastal and marine settings, with particular attention to mangroves, coastal communities, and governance.", details: ["Coastal social-ecological systems", "Coastal ecosystems", "Ecosystem services and human well-being"], image: "assets/hero-mangrove-research.png", imagePosition: "50% 55%" },
+      zh: { title: "可持续社会-生态系统", tag: "人地耦合", summary: "研究海洋与海岸带社会系统和生态系统之间的相互作用，重点关注红树林、沿海社区与治理机制。", details: ["海岸带社会-生态系统", "滨海生态系统", "生态系统服务与人类福祉"], image: "assets/hero-mangrove-research.png", imagePosition: "50% 55%" }
     },
     {
-      en: { title: "Ecological Economics", tag: "Decision support", summary: "We apply economic and decision-analysis approaches to understand policy trade-offs, public acceptability, restoration costs, and sustainable management options.", details: ["Ecosystem-service valuation", "Cost-benefit analysis", "Policy trade-offs"] },
-      zh: { title: "生态经济学", tag: "决策支持", summary: "运用生态经济学与决策分析方法，评估政策权衡、公众接受度、修复成本与可持续管理路径。", details: ["生态系统服务价值评估", "成本—效益分析", "政策权衡"] }
+      en: { title: "Ecological Economics", tag: "Decision support", summary: "We apply economic and decision-analysis approaches to understand policy trade-offs, public acceptability, restoration costs, and sustainable management options.", details: ["Ecosystem-service valuation", "Cost-benefit analysis", "Policy trade-offs"], image: "assets/news-coastal-fieldwork-6.jpeg", imagePosition: "50% 48%" },
+      zh: { title: "生态经济学", tag: "决策支持", summary: "运用生态经济学与决策分析方法，评估政策权衡、公众接受度、修复成本与可持续管理路径。", details: ["生态系统服务价值评估", "成本—效益分析", "政策权衡"], image: "assets/news-coastal-fieldwork-6.jpeg", imagePosition: "50% 48%" }
     },
     {
-      en: { title: "Climate Change Adaptation and Environmental Management", tag: "Adaptation", summary: "We assess adaptation pathways, nature-based solutions, and environmental management strategies for coastal regions facing climate risks.", details: ["Climate adaptation", "Nature-based solutions", "Environmental management"] },
-      zh: { title: "气候变化适应与环境管理", tag: "气候适应", summary: "评估面向气候风险的海岸带适应路径、基于自然的解决方案与环境管理策略。", details: ["气候变化适应", "基于自然的解决方案", "环境管理"] }
+      en: { title: "Climate Change Adaptation and Environmental Management", tag: "Adaptation", summary: "We assess adaptation pathways, nature-based solutions, and environmental management strategies for coastal regions facing climate risks.", details: ["Climate adaptation", "Nature-based solutions", "Environmental management"], image: "assets/theme-climate-adaptation-mangrove.jpeg", imagePosition: "50% 55%" },
+      zh: { title: "气候变化适应与环境管理", tag: "气候适应", summary: "评估面向气候风险的海岸带适应路径、基于自然的解决方案与环境管理策略。", details: ["气候变化适应", "基于自然的解决方案", "环境管理"], image: "assets/theme-climate-adaptation-mangrove.jpeg", imagePosition: "50% 55%" }
     },
     {
-      en: { title: "Coastal Spatial Planning", tag: "Spatial planning", summary: "We develop evidence-based spatial planning approaches that integrate ecosystem conservation, coastal livelihoods, climate resilience, and sustainable blue-economy development across the land-sea interface.", details: ["Restoration and conservation planning", "Land-sea coordination", "Spatial decision support"] },
-      zh: { title: "海岸带空间规划", tag: "空间规划", summary: "面向陆海交错带开展基于证据的空间规划研究，统筹生态保护、沿海生计、气候韧性与蓝色经济可持续发展。", details: ["保护与修复空间规划", "陆海统筹", "空间决策支持"] }
+      en: { title: "Coastal Spatial Planning", tag: "Spatial planning", summary: "We develop evidence-based spatial planning approaches that integrate ecosystem conservation, coastal livelihoods, climate resilience, and sustainable blue-economy development across the land-sea interface.", details: ["Restoration and conservation planning", "Land-sea coordination", "Spatial decision support"], image: "assets/theme-coastal-spatial-planning.jpeg", imagePosition: "50% 52%" },
+      zh: { title: "海岸带空间规划", tag: "空间规划", summary: "面向陆海交错带开展基于证据的空间规划研究，统筹生态保护、沿海生计、气候韧性与蓝色经济可持续发展。", details: ["保护与修复空间规划", "陆海统筹", "空间决策支持"], image: "assets/theme-coastal-spatial-planning.jpeg", imagePosition: "50% 52%" }
     }
   ];
 
@@ -82,7 +82,22 @@
     { dateEn: "May 9-10, 2026", dateZh: "2026年5月9-10日", categoryEn: "Conference", categoryZh: "学术会议", titleEn: "SESuS Lab attends the 2026 Chinese Journal of Environmental Science Youth Academic Conference", titleZh: "课题组参加2026年中国环境科学青年学术会议", summaryEn: "From 9 to 10 May 2026, Professor Jie Su, Huilin Lai, and Shouxiang Sun attended the 2026 Chinese Journal of Environmental Science Youth Academic Conference. Professor Su served as a session convener and presented on spatial optimisation simulation for mangrove restoration; Huilin Lai and Shouxiang Sun also presented research on wetland buffering under typhoon shocks and natural shoreline conservation planning.", summaryZh: "2026年5月9-10日，苏婕老师、赖慧琳和孙守祥参加了2026年中国环境科学青年学术会议。苏婕老师作为分会场召集人之一，作社会—生态耦合视角下的红树林修复空间优化模拟报告；赖慧琳和孙守祥分别汇报了台风冲击下湿地缓冲作用和基于成本—效益分析的中国自然岸线保护规划研究。", images: ["assets/news-ces-youth-conference-group.jpeg", "assets/news-ces-youth-conference-talk-1.jpeg", "assets/news-ces-youth-conference-talk-2.jpeg", "assets/news-ces-youth-conference-talk-3.jpeg"] }
   ];
 
+  data.publications = [
+    {
+      year: 2026,
+      type: "paper",
+      text: "Su, J.*, Tigchelaar, M., Belton, B., Wang, Q., Rossignoli, C. M., Allison, E. H., Troell, M., Gasparatos, A*. (2026). A systematic review of the climatic impacts, diverse adaptation pathways and multiple adaptation barriers for inland aquaculture. Nature Food."
+    },
+    {
+      year: 2026,
+      type: "paper",
+      text: "Dompreh, E.B., Wang, Q., Su, J., Dam Lam, R., Barman, B.K., Rossignoli, C., Gasparatos, A. (2026). Differentiated characteristics, sustainability performance and preferences among small-scale aquaculture producers: implications for sustainable intensification. Sustainability Science, 21, 325-346."
+    },
+    ...data.publications.filter((publication) => !publication.text.includes("Differentiated characteristics, sustainability performance"))
+  ];
+
   const publicationLinks = {
+    "A systematic review of the climatic impacts": "https://doi.org/10.1038/s43016-026-01410-4",
     "Dataset of production characteristics": "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2025.1646381/full",
     "Pathways to sustainability or collapse": "https://doi.org/10.1016/j.ecolmodel.2025.111416",
     "Applying the Social-Ecological Systems": "https://doi.org/10.1016/j.ocecoaman.2025.107860",

@@ -101,7 +101,8 @@
         const theme = entry[currentLang];
         return `
           <article class="theme-card">
-            <div class="media-placeholder" aria-hidden="true">
+            <div class="theme-media" aria-hidden="true">
+              <img src="${escapeHtml(theme.image || "assets/hero-mangrove-research.png")}" alt="" style="object-position: ${escapeHtml(theme.imagePosition || "50% 50%")}; transform: scale(${escapeHtml(theme.imageScale || "1")}); transform-origin: ${escapeHtml(theme.imagePosition || "50% 50%")};" />
               <span>${escapeHtml(theme.tag)}</span>
             </div>
             <div class="card-body">
@@ -267,7 +268,7 @@
                 .map(
                   (publication) => `
                     <article class="publication-item ${publication.highlight ? "highlight" : ""}">
-                      <p>${publication.url ? `<a href="${escapeHtml(publication.url)}" target="_blank" rel="noreferrer">${escapeHtml(publication.text)}</a>` : escapeHtml(publication.text)}</p>
+                      <p>${publication.url ? `<a href="${escapeHtml(publication.url)}" target="_blank" rel="noreferrer">${formatPublication(publication.text)}</a>` : formatPublication(publication.text)}</p>
                     </article>
                   `
                 )
@@ -277,6 +278,10 @@
         `
       )
       .join("");
+  }
+
+  function formatPublication(text) {
+    return escapeHtml(text).replace(/Su, J\.(\*)?/g, "<strong>$&</strong>");
   }
 
   function setupPublicationFilters() {
@@ -301,13 +306,16 @@
     target.innerHTML = data.news
       .map(
         (item) => `
-          <article class="news-card wide ${item.images.length ? "" : "no-images"}">
-            ${item.images.length ? `<div class="news-photos">${item.images.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(localized(item, "title"))}" />`).join("")}</div>` : ""}
+          <article class="news-card wide">
             <div>
               <p class="card-tag">${escapeHtml(localized(item, "category"))}</p>
               <time>${escapeHtml(localized(item, "date"))}</time>
               <h3>${escapeHtml(localized(item, "title"))}</h3>
-              <p>${escapeHtml(localized(item, "summary"))}</p>
+              <details class="news-details">
+                <summary>${escapeHtml(t("labels").viewNews)}</summary>
+                <p>${escapeHtml(localized(item, "summary"))}</p>
+                ${item.images.length ? `<div class="news-photos">${item.images.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(localized(item, "title"))}" />`).join("")}</div>` : ""}
+              </details>
             </div>
           </article>
         `
@@ -328,7 +336,6 @@
               <strong>${escapeHtml(t("labels").materials)}</strong>
               <span>${escapeHtml(localized(item, "materials"))}</span>
             </div>
-            <a class="text-link" href="mailto:jiesu@xmu.edu.cn">${escapeHtml(t("labels").applyByEmail)}: jiesu@xmu.edu.cn</a>
           </article>
         `
       )
