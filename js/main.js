@@ -54,7 +54,7 @@
     });
     const searchInput = document.querySelector("[data-publication-search]");
     if (searchInput) searchInput.placeholder = t("publicationSearchPlaceholder");
-    langButtons.forEach((button) => button.classList.toggle("active", button.dataset.langButton === currentLang));
+    langButtons.forEach((button) => { button.classList.toggle("active", button.dataset.langButton === currentLang); button.setAttribute("aria-pressed", String(button.dataset.langButton === currentLang)); });
   }
 
   function renderPiBio() {
@@ -101,8 +101,8 @@
         const theme = entry[currentLang];
         return `
           <article class="theme-card">
-            <div class="theme-media" aria-hidden="true">
-              <img src="${escapeHtml(theme.image || "assets/hero-mangrove-research.png")}" alt="" style="object-position: ${escapeHtml(theme.imagePosition || "50% 50%")}; transform: scale(${escapeHtml(theme.imageScale || "1")}); transform-origin: ${escapeHtml(theme.imagePosition || "50% 50%")};" />
+            <div class="theme-media" ${theme.imageAlt ? "" : 'aria-hidden="true"'}>
+              <img src="${escapeHtml(theme.image || "assets/hero-sesus-mangrove-2026.png")}" alt="${escapeHtml(theme.imageAlt || "")}" style="object-position: ${escapeHtml(theme.imagePosition || "50% 50%")}; transform: scale(${escapeHtml(theme.imageScale || "1")}); transform-origin: ${escapeHtml(theme.imagePosition || "50% 50%")};" />
               <span>${escapeHtml(theme.tag)}</span>
             </div>
             <div class="card-body">
@@ -149,7 +149,7 @@
                     return `
                       <article class="person-card">
                         <div class="person-photo-frame">
-                          <img class="person-photo" src="${escapeHtml(person.image)}" alt="${escapeHtml(localized(person, "name"))}"${portraitStyle} />
+                          <img class="person-photo ${person.image.includes("zelong-ma") ? "portrait-rotated" : ""}" src="${escapeHtml(person.image)}" alt="${escapeHtml(localized(person, "name"))}"${portraitStyle} />
                         </div>
                         <div>
                           <h4>${escapeHtml(localized(person, "name"))}</h4>
@@ -268,7 +268,7 @@
                 .map(
                   (publication) => `
                     <article class="publication-item ${publication.highlight ? "highlight" : ""}">
-                      <p>${publication.url ? `<a href="${escapeHtml(publication.url)}" target="_blank" rel="noreferrer">${formatPublication(publication.text)}</a>` : formatPublication(publication.text)}</p>
+                      ${publicationMarkup(publication)}
                     </article>
                   `
                 )
@@ -282,6 +282,21 @@
 
   function formatPublication(text) {
     return escapeHtml(text).replace(/Su, J\.(\*)?/g, "<strong>$&</strong>");
+  }
+
+  function publicationMarkup(publication, compact = false) {
+    const match = publication.text.match(/^(.*?\(\d{4}\)\. )(.+?)(\. [A-Z].*)$/);
+    const citation = match ? `<p class="publication-authors">${formatPublication(match[1])}</p><h4 class="publication-title">${escapeHtml(match[2])}.</h4><p class="publication-journal">${escapeHtml(match[3].slice(2))}</p>` : `<p>${formatPublication(publication.text)}</p>`;
+    return (compact ? citation.replace(/<p class="publication-authors">.*?<\/p>/, "") : citation) + (publication.url ? `<a class="doi-link" href="${escapeHtml(publication.url)}" target="_blank" rel="noreferrer">${publication.url.includes('doi.org') ? 'DOI' : (currentLang === 'zh' ? '原文' : 'Article')} ↗<span class="sr-only">: ${escapeHtml(publication.text)}</span></a>` : '');
+  }
+
+  function renderHomeFeatures() {
+    const pi = document.querySelector('[data-home-pi]');
+    if (pi) pi.textContent = currentLang === "en" ? data.piBio.en[0].split(". ")[0] + "." : data.piBio.zh[0].split("教授")[0] + "教授。";
+    const selected = document.querySelector('[data-selected-publications]');
+    if (selected) selected.innerHTML = ['A systematic review of the climatic impacts', 'Meta-analysis of coastal defence options', 'A meta-analysis of the ecological and economic'].map(title => data.publications.find(item => item.text.includes(title))).filter(Boolean).map(item => `<article class="publication-item highlight"><p class="card-tag">${item.year}</p>${publicationMarkup(item, true)}</article>`).join('');
+    const news = document.querySelector('[data-home-news]');
+    if (news) news.innerHTML = data.news.slice(0,3).map(item => `<article class="news-card"><time>${escapeHtml(localized(item,'date'))}</time><h3><a href="news.html">${escapeHtml(localized(item,'title'))}</a></h3></article>`).join('');
   }
 
   function setupPublicationFilters() {
@@ -306,15 +321,21 @@
     target.innerHTML = data.news
       .map(
         (item) => `
-          <article class="news-card wide">
+          <article class="news-card wide"${item.anchor ? ` id="${escapeHtml(item.anchor)}"` : ""}>
+            <div class="news-overview">
+              <div class="news-summary">
+                <p class="card-tag">${escapeHtml(localized(item, "category"))}</p>
+                <time>${escapeHtml(localized(item, "date"))}</time>
+                <h3>${escapeHtml(localized(item, "title"))}</h3>
+                <p class="news-excerpt">${escapeHtml(localized(item, "summary"))}</p>
+              </div>
+              ${item.images.length ? `<img class="news-cover" src="${escapeHtml(item.images[0])}" alt="${escapeHtml(item.imageAlts?.[currentLang]?.[0] || localized(item, "title"))}" />` : ""}
+            </div>
             <div>
-              <p class="card-tag">${escapeHtml(localized(item, "category"))}</p>
-              <time>${escapeHtml(localized(item, "date"))}</time>
-              <h3>${escapeHtml(localized(item, "title"))}</h3>
-              <details class="news-details">
+              <details class="news-details"${item.anchor && window.location.hash === `#${item.anchor}` ? " open" : ""}>
                 <summary>${escapeHtml(t("labels").viewNews)}</summary>
                 <p>${escapeHtml(localized(item, "summary"))}</p>
-                ${item.images.length ? `<div class="news-photos">${item.images.map((src) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(localized(item, "title"))}" />`).join("")}</div>` : ""}
+                ${item.images.length ? `<div class="news-photos ${escapeHtml(item.galleryClass || "")}">${item.images.map((src, index) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.imageAlts?.[currentLang]?.[index] || localized(item, "title"))}" />`).join("")}</div>` : ""}
               </details>
             </div>
           </article>
@@ -347,6 +368,7 @@
     localStorage.setItem("sesus-language", lang);
     applyStaticText();
     renderPiBio();
+    renderHomeFeatures();
     renderCv();
     renderAwards();
     renderThemes();
