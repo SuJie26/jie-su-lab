@@ -48,10 +48,14 @@
 
   function applyStaticText() {
     document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-    document.title = currentLang === "zh" ? "SESuS Lab | 厦门大学" : "SESuS Lab | Xiamen University";
+    const pageKey = { people: "peopleTitle", projects: "projectsTitle", publications: "publicationsTitle", news: "newsTitle", join: "joinTitle", contact: "contactTitle" }[document.body.dataset.page];
+    document.title = pageKey ? `${t(pageKey)} | SESuS Lab` : (currentLang === "zh" ? "SESuS Lab | 厦门大学" : "SESuS Lab | Xiamen University");
     document.querySelectorAll("[data-i18n]").forEach((node) => {
       node.textContent = t(node.dataset.i18n);
     });
+    document.querySelectorAll("[data-i18n-alt]").forEach(node => { node.alt = t(node.dataset.i18nAlt); });
+    const ariaLabels = currentLang === "zh" ? { ".nav-shell": "主导航", ".brand": "SESuS Lab 首页", ".language-switch": "语言切换", ".footer-links": "页脚导航", "[data-project-filters]": "项目筛选", ".publication-tools": "论文搜索与筛选", "[data-publication-year]": "按年份筛选论文", ".publication-tabs": "论文类型筛选" } : { ".nav-shell": "Primary navigation", ".brand": "SESuS Lab home", ".language-switch": "Language switch", ".footer-links": "Footer navigation", "[data-project-filters]": "Project filters", ".publication-tools": "Publication search and filter", "[data-publication-year]": "Filter publications by year", ".publication-tabs": "Publication type filter" };
+    Object.entries(ariaLabels).forEach(([selector, label]) => { document.querySelector(selector)?.setAttribute("aria-label", label); });
     const searchInput = document.querySelector("[data-publication-search]");
     if (searchInput) searchInput.placeholder = t("publicationSearchPlaceholder");
     langButtons.forEach((button) => { button.classList.toggle("active", button.dataset.langButton === currentLang); button.setAttribute("aria-pressed", String(button.dataset.langButton === currentLang)); });
@@ -63,6 +67,16 @@
     target.innerHTML = data.piBio[currentLang].map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
   }
 
+  function formatCvPeriod(period) {
+    const parts = period.split("-");
+    const format = value => {
+      if (value === "present") return currentLang === "zh" ? "至今" : "present";
+      const [year, month] = value.split(".").map(Number);
+      return currentLang === "zh" ? `${year}年${month}月` : new Intl.DateTimeFormat("en", { month: "short", year: "numeric", timeZone: "UTC" }).format(new Date(Date.UTC(year, month - 1, 1)));
+    };
+    return parts.map(format).join(currentLang === "zh" ? "—" : "–");
+  }
+
   function renderCv() {
     const target = document.querySelector("[data-cv]");
     if (!target) return;
@@ -70,7 +84,7 @@
       .map(
         (item) => `
           <article class="timeline-item">
-            <time>${escapeHtml(item.years)}</time>
+            <time>${escapeHtml(formatCvPeriod(item.years))}</time>
             <p>${escapeHtml(item[currentLang])}</p>
           </article>
         `
@@ -106,7 +120,6 @@
               <span>${escapeHtml(theme.tag)}</span>
             </div>
             <div class="card-body">
-              <p class="card-tag">${escapeHtml(theme.tag)}</p>
               <h3>${escapeHtml(theme.title)}</h3>
               <p>${escapeHtml(theme.summary)}</p>
               <ul>
@@ -172,7 +185,7 @@
   function renderProjectFilters() {
     const target = document.querySelector("[data-project-filters]");
     if (!target) return;
-    target.innerHTML = Object.entries(t("projectFilters"))
+    target.innerHTML = Object.entries(t("projectFilters")).filter(([key]) => key === "all" || data.projects.some(project => project.category === key))
       .map(
         ([key, label]) => `
           <button class="chip ${key === projectFilter ? "active" : ""}" type="button" data-project-filter="${escapeHtml(key)}">
@@ -292,11 +305,11 @@
 
   function renderHomeFeatures() {
     const pi = document.querySelector('[data-home-pi]');
-    if (pi) pi.textContent = currentLang === "en" ? data.piBio.en[0].split(". ")[0] + "." : data.piBio.zh[0].split("教授")[0] + "教授。";
+    if (pi) pi.textContent = t("homePi");
     const selected = document.querySelector('[data-selected-publications]');
-    if (selected) selected.innerHTML = ['A systematic review of the climatic impacts', 'Meta-analysis of coastal defence options', 'A meta-analysis of the ecological and economic'].map(title => data.publications.find(item => item.text.includes(title))).filter(Boolean).map(item => `<article class="publication-item highlight"><p class="card-tag">${item.year}</p>${publicationMarkup(item, true)}</article>`).join('');
+    if (selected) selected.innerHTML = ['10.1038/s43016-026-01410-4', '10.1038/s41467-024-46970-w', '10.1038/s41467-021-25349-1'].map(doi => data.publications.find(item => item.url?.endsWith(doi))).filter(Boolean).map(item => `<article class="publication-item highlight"><p class="card-tag">${item.year}</p>${publicationMarkup(item, true)}</article>`).join('');
     const news = document.querySelector('[data-home-news]');
-    if (news) news.innerHTML = data.news.slice(0,3).map(item => `<article class="news-card"><time>${escapeHtml(localized(item,'date'))}</time><h3><a href="news.html">${escapeHtml(localized(item,'title'))}</a></h3></article>`).join('');
+    if (news) news.innerHTML = data.news.slice(0,3).map((item, index) => `<article class="news-card"><time>${escapeHtml(localized(item,'date'))}</time><h3><a href="news.html#${escapeHtml(newsAnchor(item, index))}">${escapeHtml(localized(item,'title'))}</a></h3></article>`).join('');
   }
 
   function setupPublicationFilters() {
@@ -315,24 +328,28 @@
     });
   }
 
+  function newsAnchor(item, index) {
+    return item.anchor || `news-${index + 1}`;
+  }
+
   function renderNews() {
     const target = document.querySelector("[data-news]");
     if (!target) return;
     target.innerHTML = data.news
       .map(
-        (item) => `
-          <article class="news-card wide"${item.anchor ? ` id="${escapeHtml(item.anchor)}"` : ""}>
+        (item, index) => `
+          <article class="news-card wide" id="${escapeHtml(newsAnchor(item, index))}">
             <div class="news-overview">
               <div class="news-summary">
                 <p class="card-tag">${escapeHtml(localized(item, "category"))}</p>
-                <time>${escapeHtml(localized(item, "date"))}</time>
+                <time>${localized(item, "dateLabel") ? `${escapeHtml(localized(item, "dateLabel"))}: ` : ""}${escapeHtml(localized(item, "date"))}</time>
                 <h3>${escapeHtml(localized(item, "title"))}</h3>
                 <p class="news-excerpt">${escapeHtml(localized(item, "summary"))}</p>
               </div>
               ${item.images.length ? `<img class="news-cover" src="${escapeHtml(item.images[0])}" alt="${escapeHtml(item.imageAlts?.[currentLang]?.[0] || localized(item, "title"))}" />` : ""}
             </div>
             <div>
-              <details class="news-details"${item.anchor && window.location.hash === `#${item.anchor}` ? " open" : ""}>
+              <details class="news-details"${window.location.hash === `#${newsAnchor(item, index)}` ? " open" : ""}>
                 <summary>${escapeHtml(t("labels").viewNews)}</summary>
                 <p>${escapeHtml(localized(item, "summary"))}</p>
                 ${item.images.length ? `<div class="news-photos ${escapeHtml(item.galleryClass || "")}">${item.images.map((src, index) => `<img src="${escapeHtml(src)}" alt="${escapeHtml(item.imageAlts?.[currentLang]?.[index] || localized(item, "title"))}" />`).join("")}</div>` : ""}

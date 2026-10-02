@@ -1328,3 +1328,5 @@ body[data-page="home"] .section { padding-block: 4rem; }
 .news-excerpt { color:var(--muted); display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; margin:0; }
 .news-cover { width:100%; height:180px; object-fit:contain; border-radius:14px; background:#eef8fb; }
 @media(max-width:650px) { .news-overview { grid-template-columns:1fr; gap:1rem; } .news-cover { height:auto; max-height:240px; } }
+
+.news-card:has(.news-details[open]) .news-excerpt { display: none; }
