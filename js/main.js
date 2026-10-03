@@ -369,7 +369,13 @@
         (item) => `
           <article class="opportunity-card">
             <h3>${escapeHtml(localized(item, "title"))}</h3>
-            <p>${escapeHtml(localized(item, "body"))}</p>
+            <p>${item.titleEn === "PhD students"
+              ? escapeHtml(localized(item, "body")).replace(
+                  currentLang === "zh" ? "奖学金" : "scholarships",
+                  '<a class="text-link" href="https://admissions.xmu.edu.cn/Admissions/Doctoral_students.htm" target="_blank" rel="noopener noreferrer">' +
+                    (currentLang === "zh" ? "奖学金" : "scholarships") + "</a>"
+                )
+              : escapeHtml(localized(item, "body"))}</p>
             <div class="materials">
               <strong>${escapeHtml(t("labels").materials)}</strong>
               <span>${escapeHtml(localized(item, "materials"))}</span>

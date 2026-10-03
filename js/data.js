@@ -63,7 +63,7 @@ window.siteContent = {
     newsTitle: "News",
     newsContact: "Share news",
     joinKicker: "Join Us",
-    joinTitle: "Recruitment and Collaboration",
+    joinTitle: "Join us",
     joinIntro:
       "We welcome students and researchers interested in social-ecological systems, coastal and ocean management, environmental and resource economics, and sustainability science.",
     contactKicker: "Contact",
