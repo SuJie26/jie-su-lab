@@ -49,7 +49,11 @@
   function applyStaticText() {
     document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
     const pageKey = { people: "peopleTitle", projects: "projectsTitle", publications: "publicationsTitle", news: "newsTitle", join: "joinTitle", contact: "contactTitle" }[document.body.dataset.page];
-    document.title = pageKey ? `${t(pageKey)} | SESuS Lab` : (currentLang === "zh" ? "SESuS Lab | 厦门大学" : "SESuS Lab | Xiamen University");
+    const institution = currentLang === "zh" ? "厦门大学" : "Xiamen University";
+    const pageTitle = document.body.dataset.page === "people"
+      ? (currentLang === "zh" ? "苏婕与团队" : "Jie Su (苏婕) & Team")
+      : pageKey ? t(pageKey) : (currentLang === "zh" ? "苏婕 Jie Su" : "Jie Su (苏婕)");
+    document.title = `${pageTitle} | SESuS Lab | ${institution}`;
     document.querySelectorAll("[data-i18n]").forEach((node) => {
       node.textContent = t(node.dataset.i18n);
     });
