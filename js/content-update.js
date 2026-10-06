@@ -5,7 +5,7 @@
 
   data.piBio = {
     en: [
-      "Jie Su is a professor at the College of the Environment and Ecology and the Institute for Ocean and Coastal Development, Xiamen University. She is affiliated with the State Key Laboratory of Marine Biogeochemistry, the National Observation and Research Station for the Taiwan Strait Marine Ecosystem, and the Fujian Key Laboratory of Land–Sea Interface Eco-Environmental Science. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
+      "Jie Su is a professor at the College of the Environment and Ecology and the Institute for Ocean and Coastal Development, Xiamen University. She is affiliated with the State Key Laboratory of Marine Environmental Science, the National Observation and Research Station for the Taiwan Strait Marine Ecosystem, and the Fujian Key Laboratory of Land–Sea Interface Eco-Environmental Science. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
       "Her research applies social-ecological systems and ecological economics approaches to examine interactions between human societies and natural ecosystems under global environmental change. It develops integrated solutions for coastal conservation and restoration, particularly in mangrove ecosystems, linking biodiversity conservation, climate action, economic development, and human well-being.",
       "She serves as a review editor for the IPBES Spatial Planning and Connectivity Assessment and an editor of Sustainability Science. In 2024, she reviewed proposals for the European Partnership BIODIVERSA+."
     ],

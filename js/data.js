@@ -211,7 +211,7 @@ window.siteData = {
   piBio: {
     en: [
       "Jie Su is a professor at the College of the Environment and Ecology, Xiamen University, where she leads the Coastal Social-Ecological System Sustainability Lab.",
-      "She is affiliated with the State Key Laboratory of Marine Biogeochemistry, the National Observation and Research Station for the Taiwan Strait Marine Ecosystem, and the Fujian Key Laboratory of Land–Sea Interface Eco-Environmental Science. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
+      "She is affiliated with the State Key Laboratory of Marine Environmental Science, the National Observation and Research Station for the Taiwan Strait Marine Ecosystem, and the Fujian Key Laboratory of Land–Sea Interface Eco-Environmental Science. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
       "Beyond academia, she serves as an expert for the IPBES Spatial Planning and Connectivity Assessment and has served as a reviewer for the European Partnership BIODIVERSA+. Prior to joining Xiamen University, she was a Project Assistant Professor at the Institute for Future Initiatives, The University of Tokyo."
     ],
     zh: [
