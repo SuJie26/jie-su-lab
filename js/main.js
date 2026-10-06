@@ -48,7 +48,7 @@
 
   function applyStaticText() {
     document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-    const pageKey = { people: "peopleTitle", projects: "projectsTitle", publications: "publicationsTitle", news: "newsTitle", join: "joinTitle", contact: "contactTitle" }[document.body.dataset.page];
+    const pageKey = { research: "researchPageTitle", people: "peopleTitle", projects: "projectsTitle", publications: "publicationsTitle", news: "newsTitle", join: "joinTitle", contact: "contactTitle" }[document.body.dataset.page];
     const institution = currentLang === "zh" ? "厦门大学" : "Xiamen University";
     const pageTitle = document.body.dataset.page === "people"
       ? (currentLang === "zh" ? "苏婕与团队" : "Jie Su (苏婕) & Team")
@@ -115,7 +115,7 @@
     const target = document.querySelector("[data-research-themes]");
     if (!target) return;
     target.innerHTML = data.researchThemes
-      .map((entry) => {
+      .map((entry, index) => {
         const theme = entry[currentLang];
         return `
           <article class="theme-card">
@@ -124,7 +124,7 @@
               <span>${escapeHtml(theme.tag)}</span>
             </div>
             <div class="card-body">
-              <h3>${escapeHtml(theme.title)}</h3>
+              <h3><a class="theme-title-link" href="research.html#${["dynamics", "benefits", "planning", "planning"][index]}">${escapeHtml(theme.title)}</a></h3>
               <p>${escapeHtml(theme.summary)}</p>
               <ul>
                 ${theme.details.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
@@ -214,7 +214,7 @@
     target.innerHTML = projects
       .map(
         (project) => `
-          <article class="project-card">
+          <article class="project-card" id="project-${escapeHtml(project.category)}">
             <p class="card-tag">${escapeHtml(t("projectFilters")[project.category])}</p>
             <h3>${escapeHtml(localized(project, "title"))}</h3>
             <dl>
@@ -284,7 +284,7 @@
               ${grouped[year]
                 .map(
                   (publication) => `
-                    <article class="publication-item ${publication.highlight ? "highlight" : ""}">
+                    <article id="${publicationAnchor(publication)}" class="publication-item ${publication.highlight ? "highlight" : ""}">
                       ${publicationMarkup(publication)}
                     </article>
                   `
@@ -305,6 +305,28 @@
     const match = publication.text.match(/^(.*?\(\d{4}\)\. )(.+?)(\. [A-Z].*)$/);
     const citation = match ? `<p class="publication-authors">${formatPublication(match[1])}</p><h4 class="publication-title">${escapeHtml(match[2])}.</h4><p class="publication-journal">${escapeHtml(match[3].slice(2))}</p>` : `<p>${formatPublication(publication.text)}</p>`;
     return (compact ? citation.replace(/<p class="publication-authors">.*?<\/p>/, "") : citation) + (publication.url ? `<a class="doi-link" href="${escapeHtml(publication.url)}" target="_blank" rel="noreferrer">${publication.url.includes('doi.org') ? 'DOI' : (currentLang === 'zh' ? '原文' : 'Article')} ↗<span class="sr-only">: ${escapeHtml(publication.text)}</span></a>` : '');
+  }
+
+  function publicationAnchor(publication) {
+    const key = publication.url ? publication.url.replace("https://doi.org/", "") : `entry-${data.publications.indexOf(publication)}`;
+    return `publication-${key.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-$/, "")}`;
+  }
+
+  function renderResearchConnections() {
+    document.querySelectorAll("[data-related-projects]").forEach(target => {
+      const projects = target.dataset.relatedProjects.split(",").map(category => data.projects.find(project => project.category === category)).filter(Boolean);
+      target.innerHTML = `<ul class="research-reference-list">${projects.map(project => `<li><span class="research-reference-meta">${escapeHtml(project.period)} · ${escapeHtml(localized(project, "funder"))}</span><a href="projects.html#project-${escapeHtml(project.category)}">${escapeHtml(localized(project, "title"))}</a></li>`).join("")}</ul>`;
+    });
+    document.querySelectorAll("[data-related-publications]").forEach(target => {
+      const publications = target.dataset.relatedPublications.split("|").map(doi => data.publications.find(publication => publication.url?.endsWith(doi))).filter(Boolean);
+      target.innerHTML = `<ul class="research-reference-list">${publications.map(publication => {
+        const match = publication.text.match(/^(.*?\(\d{4}\)\. )(.+?)(\. [A-Z].*)$/);
+        const title = match ? match[2] : publication.text;
+        const journal = match ? match[3].slice(2) : "";
+        return `<li><span class="research-reference-meta">${publication.year} · ${escapeHtml(journal)}</span><a href="publications.html#${publicationAnchor(publication)}">${escapeHtml(title)}</a><a class="research-doi" href="${escapeHtml(publication.url)}" target="_blank" rel="noopener noreferrer" aria-label="DOI: ${escapeHtml(title)}">DOI ↗</a></li>`;
+      }).join("")}</ul>`;
+    });
+    document.querySelector(".research-contents")?.setAttribute("aria-label", t("researchContentsLabel"));
   }
 
   function renderHomeFeatures() {
@@ -406,6 +428,16 @@
     renderPublications();
     renderNews();
     renderOpportunities();
+    renderResearchConnections();
+    revealLinkedContent();
+  }
+
+  function revealLinkedContent() {
+    if (!location.hash || !["projects", "publications"].includes(document.body.dataset.page)) return;
+    const linked = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (!linked) return;
+    linked.querySelector("details")?.setAttribute("open", "");
+    requestAnimationFrame(() => linked.scrollIntoView({ block: "start" }));
   }
 
   langButtons.forEach((button) => {
@@ -414,4 +446,5 @@
 
   setupPublicationFilters();
   setLanguage(currentLang);
+  window.addEventListener("hashchange", revealLinkedContent);
 })();
