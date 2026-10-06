@@ -108,8 +108,8 @@
         "summary": "We examine climate risks and adaptation options for coastal ecosystems, communities, and aquaculture, comparing engineered, ecosystem-based, and hybrid approaches.",
         "details": [
           "Climate risks and adaptation pathways",
-          "Nature-based and hybrid coastal defence",
-          "Long-term resilience"
+          "Nature-based solutions",
+          "Barriers and enabling conditions"
         ],
         "image": "assets/theme-climate-rocky-coast-2026.jpeg",
         "imagePosition": "50% 55%",
@@ -121,8 +121,8 @@
         "summary": "研究海岸带生态系统、沿海社区与水产养殖面临的气候风险和适应方案，比较工程措施、基于生态系统的措施及其混合方案。",
         "details": [
           "气候风险与适应路径",
-          "基于自然的措施与混合海岸防护",
-          "长期韧性"
+          "基于自然的解决方案",
+          "实施障碍与促进条件"
         ],
         "image": "assets/theme-climate-rocky-coast-2026.jpeg",
         "imagePosition": "50% 55%",
