@@ -103,12 +103,12 @@
     },
     {
       "en": {
-        "title": "Climate Adaptation and Resilience",
-        "tag": "Climate adaptation",
-        "summary": "We examine climate risks and adaptation options for coastal ecosystems, communities, and aquaculture, comparing engineered, ecosystem-based, and hybrid approaches.",
+        "title": "Nature-based Solutions",
+        "tag": "Nature-based solutions",
+        "summary": "We study how protecting, restoring, and sustainably managing coastal ecosystems can support biodiversity, climate mitigation and adaptation, and human well-being. We assess their effectiveness and the conditions needed for implementation.",
         "details": [
-          "Climate risks and adaptation pathways",
-          "Nature-based solutions",
+          "Ecosystem conservation and restoration",
+          "Climate mitigation and adaptation",
           "Barriers and enabling conditions"
         ],
         "image": "assets/theme-climate-rocky-coast-2026.jpeg",
@@ -116,12 +116,12 @@
         "imageAlt": "Waves breaking against rocky coastal cliffs and a natural rock arch"
       },
       "zh": {
-        "title": "气候适应与韧性",
-        "tag": "气候适应",
-        "summary": "研究海岸带生态系统、沿海社区与水产养殖面临的气候风险和适应方案，比较工程措施、基于生态系统的措施及其混合方案。",
+        "title": "基于自然的解决方案",
+        "tag": "基于自然的解决方案",
+        "summary": "研究海岸带生态系统的保护、修复与可持续管理如何促进生物多样性保护、气候变化减缓与适应及人类福祉，并评估这些措施的成效与实施条件。",
         "details": [
-          "气候风险与适应路径",
-          "基于自然的解决方案",
+          "生态系统保护与修复",
+          "气候变化减缓与适应",
           "实施障碍与促进条件"
         ],
         "image": "assets/theme-climate-rocky-coast-2026.jpeg",

@@ -124,7 +124,7 @@
               <span>${escapeHtml(theme.tag)}</span>
             </div>
             <div class="card-body">
-              <h3><a class="theme-title-link" href="research.html#${["dynamics", "benefits", "planning", "planning"][index]}">${escapeHtml(theme.title)}</a></h3>
+              <h3><a class="theme-title-link" href="research.html#${["dynamics", "benefits", "planning", "nature-based-solutions"][index]}">${escapeHtml(theme.title)}</a></h3>
               <p>${escapeHtml(theme.summary)}</p>
               <ul>
                 ${theme.details.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}

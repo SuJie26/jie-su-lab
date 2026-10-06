@@ -12,17 +12,22 @@
   "benefitsNav": "Ecosystem benefits",
   "benefits1": "Understanding coastal change also requires examining how people benefit from ecosystems and how management decisions affect those benefits. We combine ecological monitoring, ecosystem service valuation, cost-benefit analysis, and social surveys to evaluate conservation, restoration, and resource-use options. We consider both trade-offs among ecological, economic, and social outcomes and the distribution of costs and benefits across different groups.",
   "benefits2": "Our projects supported by the National Natural Science Foundation of China focus on integrated mangrove–aquaculture systems, coastal wetland ecotourism, and restoration under different management objectives. They examine sustainability outcomes, the conditions needed for implementation, and how ecological and landscape features shape visitor and resident experiences. Together, these studies explore how conservation, restoration, and sustainable use can support regional development.",
-  "planningTitle": "Informing conservation planning and climate adaptation",
-  "planningNav": "Planning and adaptation",
+  "planningTitle": "Informing conservation and restoration planning",
+  "planningNav": "Conservation planning",
   "planning1": "We use insights into coastal dynamics and ecosystem benefits to inform decisions about where to act, which measures to use, and how management can respond to changing conditions.",
-  "planning2": "Our spatial planning research identifies priority areas for mixed-species mangrove restoration by integrating ecological suitability, species diversity, landscape connectivity, and restoration costs. Our climate research compares engineered, ecosystem-based, and hybrid coastal defence approaches and evaluates their adaptation and mitigation outcomes. We have also examined climate risks across aquaculture value chains, identifying 53 adaptation options and the policy, information, and financial barriers affecting their implementation.",
+  "planning2": "Our spatial planning research identifies priority areas for mixed-species mangrove restoration by integrating ecological suitability, species diversity, landscape connectivity, and restoration costs. We also evaluate trade-offs between alternative coastal policies to help align conservation and restoration with local priorities.",
   "planning3": "Future research will combine climate and socioeconomic scenarios to assess alternative conservation, restoration, and resource-use strategies. By examining their long-term benefits, risks, and feasibility, we aim to help coastal communities and decision-makers plan for sustainable development under uncertainty.",
   "relatedProjects": "Related projects",
   "relatedPublications": "Related publications",
   "allResearchProjects": "All projects →",
   "allResearchPublications": "All publications →",
   "researchContentsLabel": "Research areas",
-  "publicationDetails": "Publication details →"
+  "publicationDetails": "Publication details →",
+  "nbsTitle": "Developing nature-based solutions for coastal sustainability",
+  "nbsNav": "Nature-based solutions",
+  "nbs1": "We investigate how protecting, restoring, and sustainably managing coastal ecosystems can address societal challenges while supporting biodiversity and human well-being. We focus on their contribution to climate mitigation and adaptation, sustainable livelihoods, and coastal development.",
+  "nbs2": "We assess the ecological and economic outcomes of mangrove restoration and compare engineered, ecosystem-based, and hybrid coastal defence measures. This work helps evaluate the effectiveness of nature-based approaches, their benefits and trade-offs, and how they can complement engineering.",
+  "nbs3": "Our wider work on climate adaptation across aquaculture value chains has identified 53 adaptation options and the policy, information, and financial barriers affecting their implementation. Building on this evidence, we aim to identify the conditions that enable nature-based solutions to be adopted and sustained in coastal settings."
 });
   Object.assign(window.siteContent.zh, {
   "researchHeadline": "连接人与自然，推动海岸带可持续发展",
@@ -37,16 +42,21 @@
   "benefitsNav": "生态系统效益",
   "benefits1": "理解海岸带变化，也需要了解人们如何从生态系统中获益，以及管理决策如何改变这些效益。我们结合生态监测、生态系统服务价值评估、成本—效益分析与社会调查，评估保护、修复及资源利用方案。研究既关注生态、经济和社会效益之间的权衡，也关注不同群体之间的成本与收益分配。",
   "benefits2": "我们承担的国家自然科学基金项目聚焦红树林—水产养殖耦合系统、滨海湿地生态旅游，以及不同管理目标下的生态修复。研究评估其可持续性表现与实施条件，并探究生态和景观特征如何影响游客与居民的体验。这些工作共同探索保护、修复及可持续利用如何支持区域发展。",
-  "planningTitle": "支持保护规划与气候适应",
-  "planningNav": "保护规划与气候适应",
+  "planningTitle": "支持保护与修复规划",
+  "planningNav": "保护与修复规划",
   "planning1": "我们将对海岸带系统动态与生态系统效益的认识用于管理决策，研究应优先在哪里开展行动、采取哪些措施，以及如何应对不断变化的条件。",
-  "planning2": "在空间规划方面，我们整合生态适宜性、物种多样性、景观连通性与修复成本，识别多物种红树林修复的优先区域。在气候研究方面，我们比较工程措施、基于生态系统的措施及其混合方案，评估其气候适应与减缓成效。我们还研究了水产养殖价值链中的气候风险，识别出53种适应措施，并分析影响其实施的政策、信息与资金障碍。",
+  "planning2": "我们的空间规划研究整合生态适宜性、物种多样性、景观连通性与修复成本，识别多物种红树林修复的优先区域。我们也评估不同海岸带政策之间的权衡，帮助保护与修复规划更好地回应当地需求。",
   "planning3": "未来研究将结合气候与社会经济情景，评估不同保护、修复及资源利用策略。通过分析其长期效益、风险与可行性，我们希望帮助沿海社区与决策者在不确定性下规划可持续发展。",
   "relatedProjects": "相关项目",
   "relatedPublications": "相关论文",
   "allResearchProjects": "全部项目 →",
   "allResearchPublications": "全部成果 →",
   "researchContentsLabel": "研究领域",
-  "publicationDetails": "论文详情 →"
+  "publicationDetails": "论文详情 →",
+  "nbsTitle": "发展面向海岸带可持续发展的基于自然的解决方案",
+  "nbsNav": "基于自然的解决方案",
+  "nbs1": "我们研究海岸带生态系统的保护、修复与可持续管理如何在促进生物多样性保护和人类福祉的同时，应对社会面临的挑战，重点关注其对气候变化减缓与适应、可持续生计和海岸带发展的贡献。",
+  "nbs2": "我们评估红树林修复的生态与经济效益，并比较工程措施、基于生态系统的措施及其混合海岸防护方案。这些研究帮助评估基于自然的措施的成效、效益与权衡，以及它们如何与工程措施相互补充。",
+  "nbs3": "我们在水产养殖价值链气候适应方面的研究识别出53种适应措施，并分析影响其实施的政策、信息与资金障碍。在此基础上，我们希望进一步识别有助于基于自然的解决方案在海岸带被采纳并持续发挥作用的条件。"
 });
 })();
