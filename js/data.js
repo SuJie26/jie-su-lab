@@ -211,7 +211,7 @@ window.siteData = {
   piBio: {
     en: [
       "Jie Su is a professor at the College of the Environment and Ecology, Xiamen University, where she leads the Coastal Social-Ecological System Sustainability Lab.",
-      "She is affiliated with the State Key Laboratory of Marine Environmental Science, the National Observation and Research Station for the Taiwan Strait Marine Ecosystem, and the Fujian Key Laboratory of Land–Sea Interface Eco-Environmental Science. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
+      "She is affiliated with the State Key Laboratory of Marine Environmental Science; the Key Laboratory of the Coastal and Wetland Ecosystem, Ministry of Education; the National Observation and Research Station for the Taiwan Strait Marine Ecosystem; and the Fujian Provincial Key Laboratory for Coastal Ecology and Environmental Studies. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
       "Beyond academia, she serves as an expert for the IPBES Spatial Planning and Connectivity Assessment and has served as a reviewer for the European Partnership BIODIVERSA+. Prior to joining Xiamen University, she was a Project Assistant Professor at the Institute for Future Initiatives, The University of Tokyo."
     ],
     zh: [
@@ -268,52 +268,119 @@ window.siteData = {
   ],
 
   researchThemes: [
-    {
-      en: {
-        title: "Social-Ecological System Sustainability",
-        tag: "Coupled systems",
-        summary:
-          "We examine interactions between society and ecosystems in coastal and marine settings, with particular attention to mangroves, coastal communities, and governance.",
-        details: ["Coastal social-ecological systems", "Mangrove systems", "Ecosystem services and human wellbeing"]
-      },
-      zh: {
-        title: "可持续社会—生态系统",
-        tag: "人地耦合",
-        summary: "研究海洋与海岸带社会系统和生态系统之间的相互作用，重点关注红树林、沿海社区与治理机制。",
-        details: ["海岸带社会—生态系统", "红树林系统", "生态系统服务与人类福祉"]
-      }
+  {
+    "en": {
+      "title": "Coastal Social–Ecological Dynamics",
+      "tag": "Coastal dynamics",
+      "summary": "We study how coastal ecosystems and human societies shape one another, and how land use, livelihoods, and management influence change, stability, and recovery.",
+      "details": [
+        "Human–ecosystem interactions",
+        "Drivers of coastal change",
+        "System resilience and recovery"
+      ],
+      "image": "assets/theme-social-ecological-systems-2026.jpeg",
+      "imagePosition": "50% 55%",
+      "imageAlt": "Aerial view of coastal ponds and adjacent mangroves"
     },
-    {
-      en: {
-        title: "Environmental Economics",
-        tag: "Decision support",
-        summary:
-          "We apply economic and decision-analysis approaches to understand policy trade-offs, public acceptability, restoration costs, and sustainable management options.",
-        details: ["Choice experiments", "Cost-benefit analysis", "Policy trade-offs"]
-      },
-      zh: {
-        title: "环境经济学",
-        tag: "决策支持",
-        summary: "运用环境经济学与决策分析方法，评估政策权衡、公众接受度、修复成本与可持续管理路径。",
-        details: ["选择实验", "成本-效益分析", "政策权衡"]
-      }
-    },
-    {
-      en: {
-        title: "Climate Change Adaptation and Environmental Management",
-        tag: "Adaptation",
-        summary:
-          "We assess adaptation pathways, nature-based solutions, and environmental management strategies for coastal regions facing climate risks.",
-        details: ["Climate adaptation", "Nature-based solutions", "Environmental management"]
-      },
-      zh: {
-        title: "气候变化适应与环境管理",
-        tag: "气候适应",
-        summary: "评估面向气候风险的海岸带适应路径、基于自然的解决方案与环境管理策略。",
-        details: ["气候变化适应", "基于自然的解决方案", "环境管理"]
-      }
+    "zh": {
+      "title": "海岸带社会—生态系统动态",
+      "tag": "系统动态",
+      "summary": "研究海岸带生态系统与人类社会的相互作用，探究土地利用、生计活动与管理措施如何影响系统变化、稳定性和恢复。",
+      "details": [
+        "人与生态系统的相互作用",
+        "海岸带变化的驱动因素",
+        "系统韧性与恢复"
+      ],
+      "image": "assets/theme-social-ecological-systems-2026.jpeg",
+      "imagePosition": "50% 55%",
+      "imageAlt": "海岸带池塘与相邻红树林的航拍景观"
     }
-  ],
+  },
+  {
+    "en": {
+      "title": "Coupled Systems and Feedbacks",
+      "tag": "Coupled systems",
+      "summary": "We examine interactions and feedbacks between mangroves, aquaculture, and livelihoods, combining evidence synthesis, field research, and modelling to understand how ecological, economic, and social benefits persist.",
+      "details": [
+        "Human–ecosystem feedbacks",
+        "Integrated mangrove–aquaculture systems",
+        "System dynamics and agent-based models"
+      ],
+      "image": "assets/theme-ecological-economics-puffins-2026.jpeg",
+      "imagePosition": "50% 100%",
+      "imageAlt": "Two puffins standing on a grassy coastal cliff"
+    },
+    "zh": {
+      "title": "耦合系统与反馈过程",
+      "tag": "耦合系统",
+      "summary": "结合证据综合、实地研究与模型模拟，探究红树林、养殖活动和社区生计之间的相互作用及反馈，理解生态、经济和社会效益如何持续。",
+      "details": [
+        "人与生态系统之间的反馈",
+        "红树林种养耦合系统",
+        "系统动力学与基于主体的模型"
+      ],
+      "image": "assets/theme-ecological-economics-puffins-2026.jpeg",
+      "imagePosition": "50% 100%",
+      "imageAlt": "两只海鹦站在海岸草坡上"
+    }
+  },
+  {
+    "en": {
+      "title": "Conservation and Restoration Planning",
+      "tag": "Conservation planning",
+      "summary": "We use cost-minimisation and multi-objective spatial optimisation to identify coastal conservation and restoration priorities, balancing benefits and costs under changing climate and socioeconomic conditions.",
+      "details": [
+        "Conservation and restoration priorities",
+        "Opportunity costs and multiple objectives",
+        "Spatial optimisation under uncertainty"
+      ],
+      "image": "assets/theme-coastal-spatial-turtle-2026.jpeg",
+      "imagePosition": "50% 52%",
+      "imageAlt": "Sea turtle on a dark beach beside a KEEP OUT sign and breaking waves"
+    },
+    "zh": {
+      "title": "保护与修复规划",
+      "tag": "保护规划",
+      "summary": "运用成本最小化与多目标空间优化方法，识别海岸带保护和修复的优先区域，并在气候与社会经济条件变化的背景下权衡效益与成本。",
+      "details": [
+        "保护与修复优先区域",
+        "机会成本与多重目标",
+        "不确定性下的空间优化"
+      ],
+      "image": "assets/theme-coastal-spatial-turtle-2026.jpeg",
+      "imagePosition": "50% 52%",
+      "imageAlt": "黑色沙滩上的海龟、禁止进入标志与海浪"
+    }
+  },
+  {
+    "en": {
+      "title": "Nature-based Solutions",
+      "tag": "Nature-based solutions",
+      "summary": "We study how protecting, restoring, and sustainably managing coastal ecosystems can support biodiversity, climate mitigation and adaptation, and human well-being. We assess their effectiveness and the conditions needed for implementation.",
+      "details": [
+        "Ecosystem conservation and restoration",
+        "Climate mitigation and adaptation",
+        "Barriers and enabling conditions"
+      ],
+      "image": "assets/theme-climate-rocky-coast-2026.jpeg",
+      "imagePosition": "50% 55%",
+      "imageAlt": "Waves breaking against rocky coastal cliffs and a natural rock arch"
+    },
+    "zh": {
+      "title": "基于自然的解决方案",
+      "tag": "基于自然的解决方案",
+      "summary": "研究海岸带生态系统的保护、修复与可持续管理如何促进生物多样性保护、气候变化减缓与适应及人类福祉，并评估这些措施的成效与实施条件。",
+      "details": [
+        "生态系统保护与修复",
+        "气候变化减缓与适应",
+        "实施障碍与促进条件"
+      ],
+      "image": "assets/theme-climate-rocky-coast-2026.jpeg",
+      "imagePosition": "50% 55%",
+      "imageAlt": "海浪拍打岩石海岸、峭壁与天然岩拱"
+    }
+  }
+],
 
   peopleGroups: [
     {
