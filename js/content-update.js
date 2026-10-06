@@ -18,20 +18,116 @@
 
   data.researchThemes = [
     {
-      en: { title: "Social-Ecological System Sustainability", tag: "Coupled systems", summary: "We examine interactions between society and ecosystems in coastal and marine settings, with particular attention to mangroves, coastal communities, and governance.", details: ["Coastal social-ecological systems", "Coastal ecosystems", "Ecosystem services and human well-being"], image: "assets/theme-social-ecological-systems-2026.jpeg", imagePosition: "50% 55%", imageAlt: "Aerial view of coastal ponds and adjacent mangroves" },
-      zh: { title: "可持续社会—生态系统", tag: "人地耦合", summary: "研究海洋与海岸带社会系统和生态系统之间的相互作用，重点关注红树林、沿海社区与治理机制。", details: ["海岸带社会—生态系统", "滨海生态系统", "生态系统服务与人类福祉"], image: "assets/theme-social-ecological-systems-2026.jpeg", imagePosition: "50% 55%", imageAlt: "海岸带池塘与相邻红树林的航拍景观" }
+      "en": {
+        "title": "Coastal Social–Ecological Dynamics",
+        "tag": "Coastal dynamics",
+        "summary": "We study how coastal ecosystems and human societies shape one another, and how land use, livelihoods, and management influence change, stability, and recovery.",
+        "details": [
+          "Human–ecosystem interactions",
+          "Drivers of coastal change",
+          "System resilience and recovery"
+        ],
+        "image": "assets/theme-social-ecological-systems-2026.jpeg",
+        "imagePosition": "50% 55%",
+        "imageAlt": "Aerial view of coastal ponds and adjacent mangroves"
+      },
+      "zh": {
+        "title": "海岸带社会—生态系统动态",
+        "tag": "系统动态",
+        "summary": "研究海岸带生态系统与人类社会的相互作用，探究土地利用、生计活动与管理措施如何影响系统变化、稳定性和恢复。",
+        "details": [
+          "人与生态系统的相互作用",
+          "海岸带变化的驱动因素",
+          "系统韧性与恢复"
+        ],
+        "image": "assets/theme-social-ecological-systems-2026.jpeg",
+        "imagePosition": "50% 55%",
+        "imageAlt": "海岸带池塘与相邻红树林的航拍景观"
+      }
     },
     {
-      en: { title: "Ecological Economics", tag: "Decision support", summary: "We apply economic and decision-analysis approaches to understand policy trade-offs, public acceptability, restoration costs, and sustainable management options.", details: ["Ecosystem-service valuation", "Cost-benefit analysis", "Policy trade-offs"], image: "assets/theme-ecological-economics-puffins-2026.jpeg", imagePosition: "50% 100%", imageAlt: "Two puffins standing on a grassy coastal cliff" },
-      zh: { title: "生态经济学", tag: "决策支持", summary: "运用生态经济学与决策分析方法，评估政策权衡、公众接受度、修复成本与可持续管理路径。", details: ["生态系统服务价值评估", "成本—效益分析", "政策权衡"], image: "assets/theme-ecological-economics-puffins-2026.jpeg", imagePosition: "50% 100%", imageAlt: "两只海鹦站在海岸草坡上" }
+      "en": {
+        "title": "Ecosystem Benefits and Sustainable Use",
+        "tag": "Ecosystem benefits",
+        "summary": "We assess how coastal ecosystems support livelihoods and well-being, using ecological economics to evaluate ecosystem services, sustainable resource use, and the distribution of costs and benefits.",
+        "details": [
+          "Ecosystem service valuation",
+          "Sustainable resource use",
+          "Trade-offs and benefit distribution"
+        ],
+        "image": "assets/theme-ecological-economics-puffins-2026.jpeg",
+        "imagePosition": "50% 100%",
+        "imageAlt": "Two puffins standing on a grassy coastal cliff"
+      },
+      "zh": {
+        "title": "生态系统效益与可持续利用",
+        "tag": "生态系统效益",
+        "summary": "评估海岸带生态系统如何支持生计与人类福祉，运用生态经济学方法研究生态系统服务、资源的可持续利用，以及成本与收益的分配。",
+        "details": [
+          "生态系统服务价值评估",
+          "资源的可持续利用",
+          "效益权衡与收益分配"
+        ],
+        "image": "assets/theme-ecological-economics-puffins-2026.jpeg",
+        "imagePosition": "50% 100%",
+        "imageAlt": "两只海鹦站在海岸草坡上"
+      }
     },
     {
-      en: { title: "Climate Change Adaptation and Environmental Management", tag: "Adaptation", summary: "We assess adaptation pathways, nature-based solutions, and environmental management strategies for coastal regions facing climate risks.", details: ["Climate adaptation", "Nature-based solutions", "Environmental management"], image: "assets/theme-climate-rocky-coast-2026.jpeg", imagePosition: "50% 55%", imageAlt: "Waves breaking against rocky coastal cliffs and a natural rock arch" },
-      zh: { title: "气候变化适应与环境管理", tag: "气候适应", summary: "评估面向气候风险的海岸带适应路径、基于自然的解决方案与环境管理策略。", details: ["气候变化适应", "基于自然的解决方案", "环境管理"], image: "assets/theme-climate-rocky-coast-2026.jpeg", imagePosition: "50% 55%", imageAlt: "海浪拍打岩石海岸、峭壁与天然岩拱" }
+      "en": {
+        "title": "Conservation and Restoration Planning",
+        "tag": "Conservation planning",
+        "summary": "We identify where and how to prioritise coastal conservation and restoration by integrating ecological suitability, biodiversity, landscape connectivity, and costs.",
+        "details": [
+          "Conservation and restoration priorities",
+          "Ecological suitability and connectivity",
+          "Spatial decision support"
+        ],
+        "image": "assets/theme-coastal-spatial-turtle-2026.jpeg",
+        "imagePosition": "50% 52%",
+        "imageAlt": "Sea turtle on a dark beach beside a KEEP OUT sign and breaking waves"
+      },
+      "zh": {
+        "title": "保护与修复规划",
+        "tag": "保护规划",
+        "summary": "整合生态适宜性、生物多样性、景观连通性与成本，识别海岸带保护与修复的优先区域，并为措施选择提供依据。",
+        "details": [
+          "保护与修复优先区域",
+          "生态适宜性与连通性",
+          "空间决策支持"
+        ],
+        "image": "assets/theme-coastal-spatial-turtle-2026.jpeg",
+        "imagePosition": "50% 52%",
+        "imageAlt": "黑色沙滩上的海龟、禁止进入标志与海浪"
+      }
     },
     {
-      en: { title: "Coastal Spatial Planning", tag: "Spatial planning", summary: "We develop evidence-based spatial planning approaches that integrate ecosystem conservation, coastal livelihoods, climate resilience, and sustainable blue-economy development across the land-sea interface.", details: ["Restoration and conservation planning", "Land-sea coordination", "Spatial decision support"], image: "assets/theme-coastal-spatial-turtle-2026.jpeg", imagePosition: "50% 52%", imageAlt: "Sea turtle on a dark beach beside a KEEP OUT sign and breaking waves" },
-      zh: { title: "海岸带空间规划", tag: "空间规划", summary: "面向陆海交错带开展基于证据的空间规划研究，统筹生态保护、沿海生计、气候韧性与蓝色经济可持续发展。", details: ["保护与修复空间规划", "陆海统筹", "空间决策支持"], image: "assets/theme-coastal-spatial-turtle-2026.jpeg", imagePosition: "50% 52%", imageAlt: "黑色沙滩上的海龟、禁止进入标志与海浪" }
+      "en": {
+        "title": "Climate Adaptation and Resilience",
+        "tag": "Climate adaptation",
+        "summary": "We examine climate risks and adaptation options for coastal ecosystems, communities, and aquaculture, comparing engineered, ecosystem-based, and hybrid approaches.",
+        "details": [
+          "Climate risks and adaptation pathways",
+          "Nature-based and hybrid coastal defence",
+          "Long-term resilience"
+        ],
+        "image": "assets/theme-climate-rocky-coast-2026.jpeg",
+        "imagePosition": "50% 55%",
+        "imageAlt": "Waves breaking against rocky coastal cliffs and a natural rock arch"
+      },
+      "zh": {
+        "title": "气候适应与韧性",
+        "tag": "气候适应",
+        "summary": "研究海岸带生态系统、沿海社区与水产养殖面临的气候风险和适应方案，比较工程措施、基于生态系统的措施及其混合方案。",
+        "details": [
+          "气候风险与适应路径",
+          "基于自然的措施与混合海岸防护",
+          "长期韧性"
+        ],
+        "image": "assets/theme-climate-rocky-coast-2026.jpeg",
+        "imagePosition": "50% 55%",
+        "imageAlt": "海浪拍打岩石海岸、峭壁与天然岩拱"
+      }
     }
   ];
 
