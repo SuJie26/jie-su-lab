@@ -1331,6 +1331,19 @@ body[data-page="home"] .section { padding-block: 4rem; }
 
 .news-card:has(.news-details[open]) .news-excerpt { display: none; }
 
+/* Introduce the team together before the individual profiles. */
+.team-photo-section { padding-top: 2.5rem; }
+.team-photo { max-width: 1080px; margin: 0 auto; }
+.team-photo a { display: block; border-radius: 16px; }
+.team-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; border-radius: 16px; }
+.team-photo figcaption { margin-top: .9rem; color: var(--muted); font-size: .9rem; text-align: center; }
+.team-photo-section + .pi-section { padding-top: 3rem; }
+@media (max-width: 680px) {
+  .team-photo-section { padding-top: 1.5rem; }
+  .team-photo img { aspect-ratio: auto; }
+  .team-photo-section + .pi-section { padding-top: 2rem; }
+}
+
 /* Research overview and links to the existing evidence. */
 .research-hero h1 { max-width: 920px; font-size: clamp(2rem, 3.7vw, 3.1rem); line-height: 1.18; }
 .research-introduction { max-width: 900px; font-size: 1.06rem; line-height: 1.85; }

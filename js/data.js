@@ -48,6 +48,8 @@ window.siteContent = {
       "The lab works across social-ecological systems, environmental economics, and climate adaptation, with applications in mangroves, coastal restoration, sustainable aquaculture, and coastal management.",
     peopleKicker: "Team",
     peopleTitle: "Team Members",
+    teamPhotoCaption: "The SESuS Lab team",
+    teamPhotoAlt: "The SESuS Lab team gathered in a meeting room",
     projectsKicker: "Scientific Research",
     projectsTitle: "Research Projects",
     projectsIntro:
@@ -150,6 +152,8 @@ window.siteContent = {
       "课题组围绕社会—生态系统、环境经济学、气候变化适应与环境管理开展研究，并关注红树林保护与修复、可持续水产养殖、海岸带综合管理等应用议题。",
     peopleKicker: "团队",
     peopleTitle: "团队成员",
+    teamPhotoCaption: "SESuS Lab 团队合照",
+    teamPhotoAlt: "SESuS Lab 团队在会议室的合照",
     projectsKicker: "科学研究",
     projectsTitle: "科研项目",
     projectsIntro: "课题组项目关注海岸带生态修复、红树林社会—生态系统、种养耦合与生态系统服务。",
