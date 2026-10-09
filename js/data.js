@@ -564,6 +564,23 @@ window.siteData = {
           directionZh: "",
           image: "assets/yuhang-peng-2026.jpeg",
           portrait: { scale: "3", origin: "52% 41%" }
+        },
+        {
+          "nameEn": "Tina",
+          "nameZh": "李双双",
+          "roleEn": "Research Assistant",
+          "roleZh": "研究助理",
+          "majorEn": "",
+          "majorZh": "",
+          "directionEn": "",
+          "directionZh": "",
+          "bioEn": "Tina holds a master's degree in Engineering from the Institute of Science Tokyo (formerly Tokyo Institute of Technology). During her master's studies, she focused on hydrology and water resources, studying how to optimise the distribution of rainfall observation stations within a watershed. She now supports the organisation and management of SESuS Lab’s research projects and assists with related research.",
+          "bioZh": "李双双，研究助理，毕业于东京科学大学（原东京工业大学），取得工程硕士学位。硕士期间主要研究方向为水文水资源，研究课题为流域内降雨观测站点分布的优化分析。现负责课题组科研项目的组织管理与辅助研究。",
+          "image": "assets/tina-li-shuangshuang.jpeg",
+          "portrait": {
+            "scale": "1",
+            "origin": "50% 24%"
+          }
         }
       ]
     }

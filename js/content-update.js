@@ -136,7 +136,24 @@
     { en: "Postdoctoral researcher", zh: "博士后", members: [person("Fan Yang", "杨帆", "Postdoctoral researcher", "博士后", "Resources and Environment", "资源与环境", "Environmental remote sensing", "环境遥感", "Fan Yang received her PhD in Resources and Environment from Sun Yat-sen University. Her work examines vegetation remote sensing, urban ecology, and disaster-related studies, with a focus on vegetation resilience in tropical and subtropical urban regions.", "杨帆毕业于中山大学资源与环境专业，获博士学位。她主要从事环境遥感研究，关注植被遥感、城市生态与灾害事件，重点探究热带—亚热带城市植被恢复力的时空变化及其气候变化和人类活动驱动机制。", "assets/fan-yang-2026.jpeg")] },
     { en: "Research assistants", zh: "研究助理", members: [
       person("Jinhao Li", "李锦豪", "Research assistant", "研究助理", "Environmental Management", "环境管理", "Fisheries sustainability and climate economics", "渔业可持续发展与气候经济学", "Jinhao Li holds a master's degree in Environmental Management from Xiamen University and is preparing for doctoral studies. His current research examines fuel substitution and low-carbon transition pathways in fisheries.", "李锦豪拥有厦门大学环境管理硕士学位，现正准备攻读博士学位。他关注渔业可持续发展与气候变化经济学，当前研究渔船燃料替代和渔业低碳转型路径。", "assets/jinhao-li-2026.jpeg"),
-      person("Yuhang Peng", "彭宇航", "Research assistant", "研究助理", "Marine Resources and Environment", "海洋资源与环境", "Marine ecological-product valuation", "海洋生态产品价值核算", "Yuhang Peng holds a master's degree in Marine Resources and Environment from Guangdong Ocean University. He supports lab administration and works with ArcGIS and marine ecological-product valuation.", "彭宇航拥有广东海洋大学海洋资源与环境硕士学位。他负责课题组日常事务管理，熟悉 ArcGIS 和海洋生态产品价值核算。", "assets/yuhang-peng-2026.jpeg")
+      person("Yuhang Peng", "彭宇航", "Research assistant", "研究助理", "Marine Resources and Environment", "海洋资源与环境", "Marine ecological-product valuation", "海洋生态产品价值核算", "Yuhang Peng holds a master's degree in Marine Resources and Environment from Guangdong Ocean University. He supports lab administration and works with ArcGIS and marine ecological-product valuation.", "彭宇航拥有广东海洋大学海洋资源与环境硕士学位。他负责课题组日常事务管理，熟悉 ArcGIS 和海洋生态产品价值核算。", "assets/yuhang-peng-2026.jpeg"),
+      {
+        "nameEn": "Tina",
+        "nameZh": "李双双",
+        "roleEn": "Research Assistant",
+        "roleZh": "研究助理",
+        "majorEn": "",
+        "majorZh": "",
+        "directionEn": "",
+        "directionZh": "",
+        "bioEn": "Tina holds a master's degree in Engineering from the Institute of Science Tokyo (formerly Tokyo Institute of Technology). During her master's studies, she focused on hydrology and water resources, studying how to optimise the distribution of rainfall observation stations within a watershed. She now supports the organisation and management of SESuS Lab’s research projects and assists with related research.",
+        "bioZh": "李双双，研究助理，毕业于东京科学大学（原东京工业大学），取得工程硕士学位。硕士期间主要研究方向为水文水资源，研究课题为流域内降雨观测站点分布的优化分析。现负责课题组科研项目的组织管理与辅助研究。",
+        "image": "assets/tina-li-shuangshuang.jpeg",
+        "portrait": {
+          "scale": "1",
+          "origin": "50% 24%"
+        }
+      }
     ] },
     { en: "PhD students", zh: "博士研究生", members: [
       person("Huilin Lai", "赖慧琳", "PhD student (2025~)", "博士研究生 (2025~)", "Environmental Management", "环境管理", "Mangrove social-ecological systems", "红树林社会—生态系统", "Huilin Lai holds a master's degree in Economics from Ningbo University. Her research examines mangrove ecosystems, coastal livelihoods, environmental governance, ecosystem services, and social-ecological resilience.", "赖慧琳拥有宁波大学经济学硕士学位。她关注红树林生态系统、沿海生计与环境治理之间的相互作用，重点研究人类活动和管理干预对生态系统服务、生计福祉及社会—生态系统韧性的影响。", "assets/huilin-lai-2026.jpeg"),
