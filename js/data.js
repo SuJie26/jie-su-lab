@@ -76,7 +76,7 @@ window.siteContent = {
       "For applications, collaborations, and media or academic enquiries, please contact Professor Jie Su by email.",
     contactLab: "Social-Ecological System Sustainability Lab",
     contactCollege: "College of the Environment and Ecology",
-    contactInstitute: "Institute for Ocean and Coastal Development",
+    contactInstitute: "Coastal and Ocean Management Institute (COMI)",
     contactUniversity: "Xiamen University",
     contactLocation: "Xiamen, Fujian, China",
     footerCopy: "Social-Ecological System Sustainability Lab, Xiamen University.",

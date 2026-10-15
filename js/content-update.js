@@ -1,11 +1,11 @@
 (function () {
   const data = window.siteData;
-  Object.assign(window.siteContent.en, {selectedTitle: "Selected publications", profileLink: "Meet the team →", homePi: "College of the Environment and Ecology and Institute for Ocean and Coastal Development, Xiamen University.", allNews: "All news →"});
+  Object.assign(window.siteContent.en, {selectedTitle: "Selected publications", profileLink: "Meet the team →", homePi: "College of the Environment and Ecology and Coastal and Ocean Management Institute (COMI), Xiamen University.", allNews: "All news →"});
   Object.assign(window.siteContent.zh, {selectedTitle: "代表性成果", profileLink: "了解团队 →", homePi: "厦门大学环境与生态学院、海洋与海岸带发展研究院。", allNews: "全部动态 →"});
 
   data.piBio = {
     en: [
-      "Jie Su is a professor at the College of the Environment and Ecology and the Institute for Ocean and Coastal Development, Xiamen University. She is affiliated with the State Key Laboratory of Marine Environmental Science; the Key Laboratory of the Coastal and Wetland Ecosystem, Ministry of Education; the National Observation and Research Station for the Taiwan Strait Marine Ecosystem; and the Fujian Provincial Key Laboratory for Coastal Ecology and Environmental Studies. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
+      "Jie Su is a professor at the College of the Environment and Ecology and the Coastal and Ocean Management Institute (COMI), Xiamen University. She is affiliated with the State Key Laboratory of Marine Environmental Science; the Key Laboratory of the Coastal and Wetland Ecosystem, Ministry of Education; the National Observation and Research Station for the Taiwan Strait Marine Ecosystem; and the Fujian Provincial Key Laboratory for Coastal Ecology and Environmental Studies. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
       "Her research applies social-ecological systems and ecological economics approaches to examine interactions between human societies and natural ecosystems under global environmental change. It develops integrated solutions for coastal conservation and restoration, particularly in mangrove ecosystems, linking biodiversity conservation, climate action, economic development, and human well-being.",
       "She serves as a review editor for the IPBES Spatial Planning and Connectivity Assessment and an editor of Sustainability Science. In 2024, she reviewed proposals for the European Partnership BIODIVERSA+."
     ],
