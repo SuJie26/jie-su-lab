@@ -780,7 +780,7 @@ window.siteData = {
       materialsEn:
         "Please send a cover letter describing your motivation, research interests, and key skills or coursework, your CV, and your transcript.",
       materialsZh:
-        "请发送说明加入课题组动机、研究兴趣、关键技能或相关课程的求职信，并附上简历与成绩单。"
+        "请发送一封申请信，说明加入课题组的动机、研究兴趣，以及相关技能或课程背景，并附上个人简历和成绩单。"
     },
     {
       titleEn: "PhD students",
@@ -792,7 +792,7 @@ window.siteData = {
       materialsEn:
         "Please send a cover letter describing your motivation and proposed research questions and methods, together with a CV outlining your research interests, skills, and achievements, and your transcript.",
       materialsZh:
-        "请发送说明攻读博士与加入课题组动机、拟研究问题和方法的求职信，并附上介绍研究兴趣、技能与成果的简历和成绩单。"
+        "请发送一封申请信，说明攻读博士学位及加入课题组的动机、拟研究的问题与方法，并附上介绍研究兴趣、技能与成果的个人简历和成绩单。"
     },
     {
       titleEn: "Postdoctoral or visiting researchers",
