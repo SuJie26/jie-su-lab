@@ -582,6 +582,26 @@ h4 {
   margin-top: 0.9rem;
 }
 
+.pi-teaching {
+  margin-top: 1.5rem;
+  scroll-margin-top: 100px;
+}
+
+.pi-teaching h3 {
+  margin: 0 0 0.65rem;
+}
+
+.teaching-courses {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
 .two-column {
   align-items: start;
 }
