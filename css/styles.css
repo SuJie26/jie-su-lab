@@ -265,6 +265,10 @@ body[data-page]:not([data-page="home"]) .lang-button.active {
 }
 
 .lang-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   min-width: 42px;
   min-height: 34px;
   padding: 0.25rem 0.45rem;

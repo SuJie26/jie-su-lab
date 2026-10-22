@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-localized.mjs",
+    "test": "node scripts/check-seo.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.12"
+  }
+}

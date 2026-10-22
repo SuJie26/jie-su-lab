@@ -1,5 +1,8 @@
 (function () {
   const page = document.body.dataset.page || "home";
+  const isChinese = document.documentElement.dataset.siteLanguage === "zh";
+  const filename = page === "home" ? "" : `${page}.html`;
+  const languageUrl = lang => `/${lang === "zh" ? "zh/" : ""}${filename}${location.hash}`;
   const navItems = [
     ["about", "index.html#about", "navAbout"],
     ["research", "research.html", "navResearch"],
@@ -30,8 +33,8 @@
         </button>
         <div class="nav-links" id="site-menu" data-nav-menu>${navLinks}</div>
         <div class="language-switch" aria-label="Language switch">
-          <button class="lang-button active" type="button" data-lang-button="en">EN</button>
-          <button class="lang-button" type="button" data-lang-button="zh">中文</button>
+          <a class="lang-button${!isChinese ? " active" : ""}" href="${languageUrl("en")}" hreflang="en" lang="en" data-lang-button="en">EN</a>
+          <a class="lang-button${isChinese ? " active" : ""}" href="${languageUrl("zh")}" hreflang="zh-CN" lang="zh-CN" data-lang-button="zh">中文</a>
         </div>
       </nav>
     </header>`;

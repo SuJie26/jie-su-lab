@@ -5,7 +5,7 @@
   const navToggle = document.querySelector("[data-nav-toggle]");
   const navMenu = document.querySelector("[data-nav-menu]");
   const langButtons = Array.from(document.querySelectorAll("[data-lang-button]"));
-  let currentLang = localStorage.getItem("sesus-language") || "en";
+  let currentLang = document.documentElement.dataset.siteLanguage === "zh" ? "zh" : "en";
   let projectFilter = "all";
   let publicationType = "all";
 
@@ -48,21 +48,20 @@
 
   function applyStaticText() {
     document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
-    const pageKey = { research: "researchPageTitle", people: "peopleTitle", projects: "projectsTitle", publications: "publicationsTitle", news: "newsTitle", join: "joinTitle", contact: "contactTitle" }[document.body.dataset.page];
-    const institution = currentLang === "zh" ? "厦门大学" : "Xiamen University";
-    const pageTitle = document.body.dataset.page === "people"
-      ? (currentLang === "zh" ? "苏婕与团队" : "Jie Su (苏婕) & Team")
-      : pageKey ? t(pageKey) : (currentLang === "zh" ? "苏婕 Jie Su" : "Jie Su (苏婕)");
-    document.title = `${pageTitle} | SESuS Lab | ${institution}`;
     document.querySelectorAll("[data-i18n]").forEach((node) => {
-      node.textContent = t(node.dataset.i18n);
+      node.textContent = t(node.getAttribute("data-i18n"));
     });
-    document.querySelectorAll("[data-i18n-alt]").forEach(node => { node.alt = t(node.dataset.i18nAlt); });
+    document.querySelectorAll("[data-i18n-alt]").forEach(node => { node.alt = t(node.getAttribute("data-i18n-alt")); });
     const ariaLabels = currentLang === "zh" ? { ".nav-shell": "主导航", ".brand": "SESuS Lab 首页", ".language-switch": "语言切换", ".footer-links": "页脚导航", "[data-project-filters]": "项目筛选", ".publication-tools": "论文搜索与筛选", "[data-publication-year]": "按年份筛选论文", ".publication-tabs": "论文类型筛选" } : { ".nav-shell": "Primary navigation", ".brand": "SESuS Lab home", ".language-switch": "Language switch", ".footer-links": "Footer navigation", "[data-project-filters]": "Project filters", ".publication-tools": "Publication search and filter", "[data-publication-year]": "Filter publications by year", ".publication-tabs": "Publication type filter" };
     Object.entries(ariaLabels).forEach(([selector, label]) => { document.querySelector(selector)?.setAttribute("aria-label", label); });
     const searchInput = document.querySelector("[data-publication-search]");
     if (searchInput) searchInput.placeholder = t("publicationSearchPlaceholder");
-    langButtons.forEach((button) => { button.classList.toggle("active", button.dataset.langButton === currentLang); button.setAttribute("aria-pressed", String(button.dataset.langButton === currentLang)); });
+    langButtons.forEach((button) => {
+      const active = button.dataset.langButton === currentLang;
+      button.classList.toggle("active", active);
+      if (active) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
+    });
   }
 
   function renderPiBio() {
@@ -414,7 +413,6 @@
 
   function setLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem("sesus-language", lang);
     applyStaticText();
     renderPiBio();
     renderHomeFeatures();
@@ -429,7 +427,21 @@
     renderNews();
     renderOpportunities();
     renderResearchConnections();
+    normalizeLocalUrls();
     revealLinkedContent();
+  }
+
+  // Assets are shared, while internal page links stay in the URL's language.
+  function normalizeLocalUrls() {
+    document.querySelectorAll("[src], [href]").forEach(node => {
+      const attribute = node.hasAttribute("src") ? "src" : "href";
+      const value = node.getAttribute(attribute);
+      if (/^(?:assets|css|js)\//.test(value)) node.setAttribute(attribute, `/${value}`);
+      const pageLink = value.match(/^\/?(?:zh\/)?((?:index|people|research|projects|publications|news|join|contact)\.html(?:[?#].*)?)$/);
+      if (node.localName === "a" && !node.hasAttribute("data-lang-button") && pageLink) {
+        node.setAttribute(attribute, `/${currentLang === "zh" ? "zh/" : ""}${pageLink[1]}`);
+      }
+    });
   }
 
   function revealLinkedContent() {
@@ -439,10 +451,6 @@
     linked.querySelector("details")?.setAttribute("open", "");
     requestAnimationFrame(() => linked.scrollIntoView({ block: "start" }));
   }
-
-  langButtons.forEach((button) => {
-    button.addEventListener("click", () => setLanguage(button.dataset.langButton));
-  });
 
   setupPublicationFilters();
   setLanguage(currentLang);

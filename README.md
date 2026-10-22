@@ -22,7 +22,19 @@ For bilingual fields, update both the English and Chinese versions:
 - Chinese fields usually end in `Zh`
 - Interface copy is stored under `window.siteContent.en` and `window.siteContent.zh`
 
-The language switch in the navigation lets visitors choose `EN` or `中文`. The selected language is remembered in the browser.
+English pages keep their existing URLs. Chinese pages have stable URLs under `/zh/`, including `https://www.sesuslab.com/zh/` and `/zh/people.html`. Language links switch to the equivalent page and preserve its fragment. The URL determines the language, so a search result always opens the language it advertises, regardless of previous browser preferences.
+
+The Chinese pages include the translated content directly in their HTML for visitors and crawlers without JavaScript. Shared scripts still provide filters, navigation and other interactions. Each version has its own canonical URL and reciprocal `en`, `zh-CN` and `x-default` alternates. `sitemap.xml` lists all 16 canonical pages; `robots.txt` links to it.
+
+After editing root HTML templates or shared bilingual content, regenerate the Chinese pages and static navigation, then run the SEO/navigation checks:
+
+```bash
+npm install
+npm run build
+npm test
+```
+
+`scripts/build-localized.mjs` reuses the existing rendering scripts and translations; it makes no network requests. Commit the generated HTML and sitemap along with the source edits. GitHub Pages serves these static files directly and requires no build configuration change.
 
 ## Update common content
 

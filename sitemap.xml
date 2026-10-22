@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.sesuslab.com/</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/</loc></url>
   <url><loc>https://www.sesuslab.com/people.html</loc></url>
-  <url><loc>https://www.sesuslab.com/projects.html</loc></url>
-  <url><loc>https://www.sesuslab.com/publications.html</loc></url>
-  <url><loc>https://www.sesuslab.com/news.html</loc></url>
-  <url><loc>https://www.sesuslab.com/join.html</loc></url>
-  <url><loc>https://www.sesuslab.com/contact.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/people.html</loc></url>
   <url><loc>https://www.sesuslab.com/research.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/research.html</loc></url>
+  <url><loc>https://www.sesuslab.com/projects.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/projects.html</loc></url>
+  <url><loc>https://www.sesuslab.com/publications.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/publications.html</loc></url>
+  <url><loc>https://www.sesuslab.com/news.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/news.html</loc></url>
+  <url><loc>https://www.sesuslab.com/join.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/join.html</loc></url>
+  <url><loc>https://www.sesuslab.com/contact.html</loc></url>
+  <url><loc>https://www.sesuslab.com/zh/contact.html</loc></url>
 </urlset>
