@@ -6,11 +6,13 @@
   data.piBio = {
     en: [
       "Jie Su is a professor at the College of the Environment and Ecology and the Coastal and Ocean Management Institute (COMI), Xiamen University. She is affiliated with the State Key Laboratory of Marine Environmental Science; the Key Laboratory of the Coastal and Wetland Ecosystem, Ministry of Education; the National Observation and Research Station for the Taiwan Strait Marine Ecosystem; and the Fujian Provincial Key Laboratory for Coastal Ecology and Environmental Studies. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
+      "Before joining Xiamen University, she conducted research at the University of Tokyo (2022–2025). She holds a PhD in Sustainability Science from the University of Tokyo (GPSS-GLI), an MSc in Environmental Science from Xiamen University, and a BSc in Environmental Science from Fudan University in China.",
       "Her research applies social-ecological systems and ecological economics approaches to examine interactions between human societies and natural ecosystems under global environmental change. It develops integrated solutions for coastal conservation and restoration, particularly in mangrove ecosystems, linking biodiversity conservation, climate action, economic development, and human well-being.",
       "She serves as a review editor for the IPBES Spatial Planning and Connectivity Assessment and an editor of Sustainability Science. In 2024, she reviewed proposals for the European Partnership BIODIVERSA+."
     ],
     zh: [
       "苏婕，厦门大学环境与生态学院、海洋与海岸带发展研究院教授、博士生导师，海洋生物地球化学全国重点实验室、福建台湾海峡海洋生态系统国家野外科学观测研究站和福建省海陆界面生态环境重点实验室固定科研人员，东京大学未来愿景研究中心客座研究员。",
+      "加入厦门大学之前，她于2022—2025年在东京大学从事研究工作。她在东京大学可持续发展科学项目（GPSS-GLI）获得博士学位，并分别在厦门大学和复旦大学获得环境科学硕士和学士学位。",
       "她的研究运用社会—生态系统与生态经济学方法，探究全球环境变化背景下人类社会与自然生态系统之间复杂的相互作用。研究旨在构建海岸带保护与修复的综合解决方案，尤其聚焦红树林生态系统，通过统筹生物多样性保护、气候变化减缓与适应、经济发展和人类福祉，实现可持续发展。",
       "她现任生物多样性和生态系统服务政府间科学政策平台（IPBES）空间规划与连通性评估评审编辑，以及 Sustainability Science 期刊编辑。2024年，她担任欧盟生物多样性跨国多边合作计划（BIODIVERSA+）项目评审专家。"
     ]

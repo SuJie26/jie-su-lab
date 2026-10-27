@@ -219,11 +219,13 @@ window.siteData = {
   piBio: {
     en: [
       "Jie Su is a professor at the College of the Environment and Ecology, Xiamen University, where she leads the Coastal Social-Ecological System Sustainability Lab.",
+      "Before joining Xiamen University, she conducted research at the University of Tokyo (2022–2025). She holds a PhD in Sustainability Science from the University of Tokyo (GPSS-GLI), an MSc in Environmental Science from Xiamen University, and a BSc in Environmental Science from Fudan University in China.",
       "She is affiliated with the State Key Laboratory of Marine Environmental Science; the Key Laboratory of the Coastal and Wetland Ecosystem, Ministry of Education; the National Observation and Research Station for the Taiwan Strait Marine Ecosystem; and the Fujian Provincial Key Laboratory for Coastal Ecology and Environmental Studies. She is also a Visiting Researcher at the Institute for Future Initiatives, The University of Tokyo.",
       "Beyond academia, she serves as an expert for the IPBES Spatial Planning and Connectivity Assessment and has served as a reviewer for the European Partnership BIODIVERSA+. Prior to joining Xiamen University, she was a Project Assistant Professor at the Institute for Future Initiatives, The University of Tokyo."
     ],
     zh: [
       "苏婕，厦门大学环境与生态学院、海洋与海岸带发展研究院教授、博导，东京大学未来愿景研究中心客座研究员。",
+      "加入厦门大学之前，她于2022—2025年在东京大学从事研究工作。她在东京大学可持续发展科学项目（GPSS-GLI）获得博士学位，并分别在厦门大学和复旦大学获得环境科学硕士和学士学位。",
       "研究聚焦海洋与海岸带可持续发展领域，重点关注社会—生态系统、环境经济学以及气候变化与环境管理等前沿方向，旨在为生态—经济—社会协同发展提供理论与决策支撑。",
       "现任生物多样性和生态系统服务政府间科学政策平台（IPBES）空间规划与连通性评估专家，欧盟生物多样性跨国多边合作计划（European Partnership BIODIVERSA+）项目评审专家，Sustainability Science 期刊编委。"
     ]
