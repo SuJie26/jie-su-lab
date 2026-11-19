@@ -186,6 +186,67 @@
   ];
 
   data.news = [
+    {
+      anchor: "imcc8-edinburgh-2026",
+      dateEn: "November 13–17, 2026",
+      dateZh: "2026年11月13日至17日",
+      categoryEn: "Conference",
+      categoryZh: "学术会议",
+      titleEn: "Jie Su and Huilin Lai attend and present at the 8th International Marine Conservation Congress",
+      titleZh: "苏婕与赖慧琳参加第八届国际海洋保护大会并展示研究成果",
+      summaryEn: "Professor Jie Su and Huilin Lai attended the 8th International Marine Conservation Congress (IMCC8), held in Edinburgh, Scotland, from November 13 to 17, 2026. Professor Su delivered an oral presentation entitled “Evaluating wetland-based nature-based solutions for typhoon risk reduction in coastal cities,” discussing how scientific assessments can inform coastal protection planning and climate adaptation strategies. Huilin Lai presented a poster entitled “Mapping Feedback Mechanisms in Mangrove Social-Ecological Systems using Network Analysis,” examining interactions among ecological, social, and governance processes and their implications for mangrove conservation and management.",
+      summaryZh: "2026年11月13日至17日，苏婕教授与赖慧琳参加在苏格兰爱丁堡举办的第八届国际海洋保护大会（IMCC8）。苏婕教授作题为“Evaluating wetland-based nature-based solutions for typhoon risk reduction in coastal cities”的口头报告，探讨如何通过科学评估为海岸防护规划与气候变化适应策略提供依据。赖慧琳展示题为“Mapping Feedback Mechanisms in Mangrove Social-Ecological Systems using Network Analysis”的学术海报，分析生态、社会与治理过程之间的相互作用及其对红树林保护与管理的启示。",
+      images: [
+        "assets/news-imcc8-1.jpeg",
+        "assets/news-imcc8-2.jpeg",
+        "assets/news-imcc8-3.jpeg",
+        "assets/news-imcc8-4.jpeg"
+      ],
+      galleryClass: "complete-gallery",
+      imageAlts: {
+        en: [
+          "Attendee beside the 8th International Marine Conservation Congress display",
+          "Huilin Lai beside her research poster on mangrove social-ecological systems",
+          "Jie Su presenting at the congress lectern",
+          "Congress attendees discussing research posters"
+        ],
+        zh: [
+          "第八届国际海洋保护大会展板前的参会者",
+          "赖慧琳与红树林社会—生态系统研究海报",
+          "苏婕在大会讲台作口头报告",
+          "参会者在学术海报展区交流"
+        ]
+      }
+    },
+    {
+      anchor: "slu-academic-exchange-2026",
+      dateEn: "November 9–11, 2026",
+      dateZh: "2026年11月9日至11日",
+      categoryEn: "Academic Exchange",
+      categoryZh: "学术交流",
+      titleEn: "Jie Su and Huilin Lai visit the Swedish University of Agricultural Sciences for academic exchange",
+      titleZh: "苏婕与赖慧琳赴瑞典农业科学大学开展学术交流",
+      summaryEn: "Professor Jie Su and Huilin Lai visited the Swedish University of Agricultural Sciences (SLU) in Uppsala, Sweden, from November 9 to 11, 2026, for academic exchange. The visit included a workshop on “Coastal Systems Restoration and Dynamics,” where researchers discussed the ecological and social processes shaping coastal degradation and recovery. Further discussions focused on coastal social–ecological systems, aquaculture, and dynamical systems modelling, as well as opportunities for continued collaboration.",
+      summaryZh: "2026年11月9日至11日，苏婕教授与赖慧琳赴瑞典乌普萨拉的瑞典农业科学大学（SLU）开展学术交流。访问期间参与了“Coastal Systems Restoration and Dynamics”专题研讨会，与相关领域学者围绕海岸带退化与恢复过程中的生态和社会机制展开讨论。双方还就海岸带社会—生态系统、水产养殖及动力系统建模等研究方向进行交流，并探讨了未来科研合作的可能性。",
+      images: [
+        "assets/news-slu-exchange-1.jpeg",
+        "assets/news-slu-exchange-2.jpeg",
+        "assets/news-slu-exchange-3.jpeg"
+      ],
+      galleryClass: "complete-gallery",
+      imageAlts: {
+        en: [
+          "Two visitors at the entrance to the Swedish University of Agricultural Sciences",
+          "Workshop participants discussing research around a laptop",
+          "Workshop session with a projected presentation"
+        ],
+        zh: [
+          "瑞典农业科学大学校门前的访问合影",
+          "研讨会参与者围绕笔记本电脑交流",
+          "研讨会现场的投影报告"
+        ]
+      }
+    },
     {"dateEn": "October 14, 2026", "dateZh": "2026年10月14日", "categoryEn": "Academic Forum", "categoryZh": "学术论坛", "titleEn": "Jie Su co-convenes the 110th Lingfeng Forum and 99th Xiangshan Forum on Coastal Environmental Sustainability", "titleZh": "苏婕共同召集凌峰论坛第110讲暨香山论坛第99期“海岸带环境可持续性”学术交流", "summaryEn": "On 14 October 2026, Professors Nengwang Chen and Jie Su co-convened the 110th Lingfeng Forum and 99th Xiangshan Forum on Coastal Environmental Sustainability at the Zeng Chengkui Building on Xiamen University's Siming campus. Researchers from Leiden University, Wageningen University, the Institute of Urban Environment of the Chinese Academy of Sciences, and Xiamen University discussed nature-based solutions, coastal urban renewal, mariculture carbon footprints, and sustainable mangrove restoration. Professor Su presented research on sustainable mangrove restoration. The exchange explored opportunities for interdisciplinary collaboration between Chinese and Dutch researchers.", "summaryZh": "2026年10月14日下午，陈能汪教授与苏婕教授共同召集的凌峰论坛第110讲暨香山论坛第99期“海岸带环境可持续性”在厦门大学思明校区曾呈奎楼举行。来自荷兰莱顿大学、瓦赫宁根大学、中国科学院城市环境研究所和厦门大学的专家学者，围绕基于自然的解决方案、沿海城市更新与再绿化、海水养殖产品碳足迹评估与管理、红树林可持续修复等议题开展交流。苏婕教授作红树林可持续修复研究报告。论坛促进了中荷学者的相互了解，并探讨海岸带环境可持续性领域的跨学科合作。", "images": ["assets/news-lingfeng-xiangshan-2026-group.jpeg", "assets/news-lingfeng-xiangshan-2026-jie-su.jpeg"], "anchor": "lingfeng-xiangshan-forum-2026", "galleryClass": "complete-gallery", "imageAlts": {"en": ["Forum participants posing around a conference table at Xiamen University", "Speaker presenting mangrove restoration planning beside a screen"], "zh": ["厦门大学会议桌旁的论坛参会者合影", "屏幕旁关于红树林修复规划的研究汇报"]}},
     { dateEn: "August 23–29, 2026", dateZh: "2026年8月23—29日", categoryEn: "Author meeting", categoryZh: "评估作者会议", titleEn: "Jie Su attends the second author meeting of the IPBES spatial planning and connectivity assessment", titleZh: "苏婕参加 IPBES 空间规划与连通性评估第二次作者会议", summaryEn: "From 23 to 29 August 2026, Professor Jie Su attended the second author meeting of the IPBES Spatial Planning and Connectivity Assessment in Monteverde, Costa Rica, in her capacity as a review editor. Participants reviewed more than 5,000 comments from governments and stakeholders on the first-order draft and discussed revisions for the second draft of the assessment.", summaryZh: "2026年8月23—29日，苏婕以评审编辑身份赴哥斯达黎加蒙特韦尔德参加 IPBES 空间规划与连通性评估第二次作者会议。与会专家集中审阅了各国政府和利益相关方针对评估报告一稿提交的5,000余条意见，并就报告二稿的修订方向进行了讨论。", images: ["assets/news-ipbes-author-meeting-1.jpeg", "assets/news-ipbes-author-meeting-2.jpeg", "assets/news-ipbes-author-meeting-3.jpeg"], anchor: "ipbes-author-meeting", galleryClass: "ipbes-gallery", imageAlts: { en: ["Group posing on stone steps outside a wooden building", "Participants discussing around a table with laptops", "Large group standing on a lawn outside a building"], zh: ["木屋外石阶上的集体合影", "围桌使用电脑讨论的参会者", "建筑前草地上的集体合影"] } },
     { dateEn: "August 9–16, 2026", dateZh: "2026年8月9—16日", categoryEn: "Summer School", categoryZh: "暑期学校", titleEn: "Zelong Ma attends the Summer School on Geography and Sustainability 2026", titleZh: "马泽龙参加2026年地理学与可持续性暑期学堂", summaryEn: "From 9 to 16 August 2026, Zelong Ma attended the 2026 Summer School on Geography and Sustainability at Beijing Normal University. The programme focused on frontiers in telecoupling and metacoupling research for global sustainability challenges; as a group leader, he also organised the project Understanding Cross-Regional Flood Impacts through the Telecoupling Framework.", summaryZh: "2026年8月9—16日，马泽龙参加了北京师范大学地理科学学部主办的2026年地理学与可持续性暑期学堂。学堂聚焦远程耦合与全程耦合研究前沿及全球可持续发展挑战；他作为小组组长，组织开展了跨区域洪水影响远程耦合框架项目。", images: ["assets/news-geography-summer-1.jpeg", "assets/news-geography-summer-2.jpeg", "assets/news-geography-summer-5.jpeg", "assets/news-geography-summer-6.jpeg"], anchor: "news-2" },
