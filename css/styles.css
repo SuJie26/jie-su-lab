@@ -149,16 +149,11 @@ body[data-page]:not([data-page="home"]) .lang-button.active {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
+  flex: 0 0 auto;
   width: 58px;
-  height: 42px;
-  border-radius: var(--radius);
-  color: var(--teal-deep);
-  background: var(--teal);
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0;
+  height: 46px;
+  object-fit: contain;
 }
 
 .brand strong,
@@ -1224,7 +1219,7 @@ section[id] { scroll-margin-top:100px; }
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible { outline:3px solid var(--coral);outline-offset:4px; }
 body[data-page]:not([data-page="home"]) .nav-toggle { color:var(--ink);background:var(--surface);border-color:var(--line); }
 @media(max-width:1080px) { .hero-metrics { grid-template-columns:repeat(3,1fr); }.selected-grid { grid-template-columns:1fr; }.section-heading.row>.text-link { justify-self:start; }.nav-toggle { margin-left:auto; } }
-@media(max-width:680px) { .container,.nav-shell,.hero-content { width:calc(100% - 2rem); }.hero { min-height:0; }.hero-image { width:100%;max-width:none;opacity:.32; }.hero-overlay { background:linear-gradient(0deg,#043f4a,rgba(4,63,74,.6)); }.hero-content { padding:116px 0 28px; }.hero h1 { font-size:3.2rem; }.hero-metrics { grid-template-columns:1fr;gap:0;margin-top:2rem; }.hero-metrics div { padding:.75rem 0; }.hero-metrics dd { margin-top:.1rem; }.theme-grid { grid-template-columns:1fr; }.home-pi { grid-template-columns:1fr;gap:1.5rem; }.home-pi>img { width:150px; }.section,.intro-band { padding:3rem 0; }.card-body { padding:1.3rem; }.theme-media { height:190px; }.brand { gap:.4rem; }.brand-mark { width:42px;font-size:.65rem; }.brand strong { font-size:.9rem; }.nav-shell { gap:.45rem; }.lang-button { min-width:35px; }.language-switch { gap:0; }.publication-year h3 { padding-top:0; }.person-photo-frame { max-width:180px; } }
+@media(max-width:680px) { .container,.nav-shell,.hero-content { width:calc(100% - 2rem); }.hero { min-height:0; }.hero-image { width:100%;max-width:none;opacity:.32; }.hero-overlay { background:linear-gradient(0deg,#043f4a,rgba(4,63,74,.6)); }.hero-content { padding:116px 0 28px; }.hero h1 { font-size:3.2rem; }.hero-metrics { grid-template-columns:1fr;gap:0;margin-top:2rem; }.hero-metrics div { padding:.75rem 0; }.hero-metrics dd { margin-top:.1rem; }.theme-grid { grid-template-columns:1fr; }.home-pi { grid-template-columns:1fr;gap:1.5rem; }.home-pi>img { width:150px; }.section,.intro-band { padding:3rem 0; }.card-body { padding:1.3rem; }.theme-media { height:190px; }.brand { gap:.4rem; }.brand-mark { width:42px; }.brand strong { font-size:.9rem; }.nav-shell { gap:.45rem; }.lang-button { min-width:35px; }.language-switch { gap:0; }.publication-year h3 { padding-top:0; }.person-photo-frame { max-width:180px; } }
 @media(prefers-reduced-motion:reduce) { :root { scroll-behavior:auto; }* { transition:none!important; } }
 /* The source portrait is stored sideways; correct presentation without altering it. */
 /* These close-up source photos need their full framing rather than extra zoom. */
@@ -1264,7 +1259,6 @@ body[data-page]:not([data-page="home"]) .site-header {
 }
 .brand,.nav-links a,.lang-button,
 .site-header.scrolled .brand,.site-header:focus-within .brand { color:var(--ink); }
-.brand-mark { background:linear-gradient(135deg,#c8f5fb,#9ae2ec);color:var(--ink); }
 .language-switch,.site-header.scrolled .language-switch,.site-header:focus-within .language-switch { border-color:var(--line);background:rgba(255,255,255,.85); }
 .lang-button.active,.site-header.scrolled .lang-button.active,.site-header:focus-within .lang-button.active,
 body[data-page]:not([data-page="home"]) .lang-button.active { color:var(--ink);background:#b3edf2; }
@@ -1325,7 +1319,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .section.muted { background: #edf8fd; }
 .page-hero { background: #e4f5fc; }
 .join-section { background: #edf8fd; }
-.brand-mark { background: #b7ebf2; }
 .theme-card,.project-card,.news-card,.person-card,.contact-card,.publication-item,
 .pi-photo,.button.primary { box-shadow: none; }
 .theme-media span { display: none; }

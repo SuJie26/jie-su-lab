@@ -25,7 +25,7 @@
     <header class="site-header" data-header>
       <nav class="nav-shell" aria-label="Primary navigation">
         <a class="brand" href="index.html" aria-label="SESuS Lab home">
-          <span class="brand-mark">SESuS</span>
+          <img class="brand-mark" src="/assets/sesus-lab-logo.png" alt="" width="58" height="46">
           <span><strong>SESuS Lab</strong><small data-i18n="brandSubtitle">Xiamen University</small></span>
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle>

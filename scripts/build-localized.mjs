@@ -80,7 +80,7 @@ function makePage(p, lang) {
   document.querySelectorAll('script[src]').forEach(n => {
     if (/\/js\/(?:main|shell)\.js/.test(n.getAttribute('src'))) n.setAttribute('src', n.getAttribute('src').split('?')[0] + '?v=20261022-seo');
   });
-  document.querySelector('link[rel="stylesheet"]').setAttribute('href', '/css/styles.css?v=20261022-seo');
+  document.querySelector('link[rel="stylesheet"]').setAttribute('href', '/css/styles.css?v=20261125-logo');
   document.querySelectorAll('[data-lang-button]').forEach(n => {
     const active = n.dataset.langButton === lang;
     n.classList.toggle('active', active);
